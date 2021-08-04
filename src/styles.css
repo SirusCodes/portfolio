@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+}
+
+.nav-bar{
+    list-style: none;
+    padding: 10px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.nav-bar li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-bar li a:hover{
+    color: #88d3ff;
+}
