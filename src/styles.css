@@ -32,7 +32,10 @@ body{
     display: block;
     text-decoration: none;
     color: white;
+    transform: translateX(10vw);
     transition: transform 0.3s ease-in, color 0.2s ease-in;
+    animation: 1s ease-in 1 slide forwards;
+    animation-delay: calc(var(--animation-pos) * 100ms);
 }
 
 .nav-bar li a:hover, .contact i:hover{
@@ -80,11 +83,41 @@ body{
 
 .contact i{
     padding: 40% 20% ;
-    font-size: 2.2rem;
+    font-size: 2.2vw;
     transition: transform 0.3s ease-in, color 0.2s ease-in;
+}
+
+.contact a {
+    transform: translateX(-10vw);
+    animation: 1s ease-in 1 slide forwards;
+    animation-delay: calc(var(--animation-pos) * 100ms);
 }
 
 h3{
     margin-bottom: 0px;
 }
 
+.contact-line{
+    position: fixed;
+    background-color: white;
+    width: 1.5px;
+    top: 0;
+    bottom: 0;
+    left: 4%;
+    animation: 0.8s ease-in 0s 1 topToBottomLine;
+}
+
+@keyframes slide {
+    100%{
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes topToBottomLine {
+    0%{
+        bottom: 100vh;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
