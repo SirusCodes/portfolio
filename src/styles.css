@@ -35,12 +35,10 @@ body{
     transition: transform 0.3s ease-in, color 0.2s ease-in;
 }
 
-.nav-bar li a:hover{
+.nav-bar li a:hover, .contact i:hover{
     color: #88d3ff;
     transform: translateY(-5px) scale(1.1);
 }
-
-
 
 #home{
     height: 100vh;
@@ -71,25 +69,19 @@ body{
     width: 50%;
 }
 
-#connect{
+.contact{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 3%;
 }
 
-#connect div{
-    display: flex;
-    list-style: none;
-}
-
-#connect i{
-    padding: 0px 20px 100px 20px;
-    font-size: 40px;
-}
-
-#connect i:hover{
-    color: #88d3ff;
+.contact i{
+    padding: 40% 20% ;
+    font-size: 2.2rem;
+    transition: transform 0.3s ease-in, color 0.2s ease-in;
 }
 
 h3{
