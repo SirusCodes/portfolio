@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darshan Rander</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     </style>
@@ -34,6 +33,9 @@
         <a href="https://twitter.com/SirusTweets" target="_blank" style="--animation-pos:3;">
             <i class="fab fa-twitter"></i>
         </a>
+        <a href="mailto:darshandrander@gmail.com" target="_blank" style="--animation-pos:4;">
+            <i class="fas fa-envelope"></i>
+        </a>
     </div>
 
     <div class="contact-line"></div>
@@ -43,21 +45,29 @@
             <h1>Hey there! I'm Darshan Rander</h1>
             <h2>A software developer</h2>
         </div>
-        <img src="src/img/darshan.jpg" />
+        <img src="src/img/darshan.jpg" alt="Darshan Rander" />
     </div>
 
     <div id="about">
         <h1>About me</h1>
-        <p>
-            Hello, I'm Darshan from Thadomal Shahani Engineering College (TSEC), Mumbai.
-            I'm a third year engineering student. I'm a passionate software developer.
-            I have deep interest in App Development and also dipped my toes into Web Development.
-            Majorly into backend development.
-        </p>
+
+        <div class="about-desc">
+            <p>
+                Hello, I'm Darshan from Thadomal Shahani Engineering College (TSEC), Mumbai. I'm a third year engineering student. I'm a passionate software developer. I have deep interest in App Development and also dipped my toes into Web Development. Majorly into
+                backend development.
+            </p>
+        </div>
     </div>
 
     <div id="experience">
         <h1>Experience</h1>
+
+        <h3>Nymble</h3>
+        <ol>
+            <li>Working on a Flutter app which will work along with an IoT device named Julia a cooking robot.</li>
+            <li>Working with GraphQL APIs</li>
+            <li>Experiencing a work environment of a fast paced development lifecycle</li>
+        </ol>
 
         <h3>Fame Technologies</h3>
         <ol>
@@ -72,44 +82,62 @@
             <li>Lead a team of 4 Android developers</li>
         </ol>
 
-        <h3>Nymble</h3>
-        <ol>
-            <li>Working on a Flutter app which will work along with an IoT device named Julia a cooking robot.</li>
-            <li>Working with GraphQL APIs</li>
-            <li>Experiencing a work environment of a fast paced development lifecycle</li>
-        </ol>
     </div>
 
-    <div id="projects">
+    <section id="projects">
         <h1>Projects</h1>
 
-        <h3>Heartry</h3>
-        <ol>
-            <li>Developing an app for writers so they can share their art easily on social media platforms.</li>
-            <li>Implementing Google Drive to backup user data to maintain user privacy along with backup functionality
-            </li>
-            <li>Made an screen to make a custom images for sharing.</li>
-        </ol>
+        <div class="cards-wrapper">
 
-        <h3>LCO-Workout</h3>
-        <ol>
-            <li>Created an workout app which gave users daily tasks and also option to select between pre-curated
-                workout sessions for day to a user.</li>
-            <li>It was a challenge by Hitesh Choudhary a YouTuber. </li>
-        </ol>
+            <div class="card">
+                <img loading="lazy" src="/src/img/heartry.png" alt="Heartry" />
+                <div class="info">
+                    <div class="name">Heartry</div>
+                    <div class="description">
+                        <li>Developing an app for writers so they can share their art easily on social media platforms.
+                        </li>
+                        <li>Implementing Google Drive to backup user data to maintain user privacy along with backup functionality
+                        </li>
+                        <li>Made an screen to make a custom images for sharing.</li>
+                    </div>
+                    <div class="links">
+                        <a href="https://play.google.com/store/apps/details?id=com.darshan.heartry" target="_blank" rel="noreferrer"><i class="fa-brands fa-google-play"></i> Play store</a>,
+                        <a href="https://github.com/SirusCodes/heartry" target="_blank" rel="noreferrer"><i
+                                class="fab fa-github"></i> GitHub</a>
+                    </div>
+                    <div class="project-tags">
+                        <div class="project-tag">Flutter</div>
+                        <div class="project-tag">Google Drive</div>
+                        <div class="project-tag">Android</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img loading="lazy" src="/src/img/stocker.png" alt="Stocker" />
+                <div class="info">
+                    <div class="name">Stocker</div>
+                    <div class="description">
+                        <li>Stocker is an app to manage stocks easily</li>
+                        <li>It also stores all the transactions made by the application</li>
+                        <li>An auto-generated invoice is sent to the buyer once the transaction is complete</li>
+                    </div>
+                    <div class="links">
+                        <a href="https://play.google.com/store/apps/details?id=com.darshan.heartry" target="_blank" rel="noreferrer"><i class="fa-brands fa-google-play"></i> Play store</a>,
+                        <a href="https://github.com/SirusCodes/heartry" target="_blank" rel="noreferrer"><i
+                                class="fab fa-github"></i> GitHub</a>
+                    </div>
+                    <div class="project-tags">
+                        <div class="project-tag">Flutter</div>
+                        <div class="project-tag">Appwrite</div>
+                        <div class="project-tag">Python</div>
+                    </div>
+                </div>
+            </div>
 
-        <h3>Attendance Dilemma</h3>
-        <ol>
-            <li> Designed and developed to manage attendance of students directly from Microsoft Teams for my College to
-                manage attendance of students during online lectures.
-            </li>
-            <li>Used JavaFX to create a GUI for listing and interface between teachers. </li>
-        </ol>
-    </div>
+        </div>
+    </section>
 
-
-
-
+    <script src="src/main.js"></script>
 </body>
 
 </html>
