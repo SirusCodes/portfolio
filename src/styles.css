@@ -64,6 +64,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#about {
     height: 100vh;
 }
 
@@ -74,13 +77,6 @@ body {
 }
 
 .about-desc p {
-    text-align: justify;
-    width: 50%;
-}
-
-#experience h1,
-h3,
-ol {
     text-align: justify;
     width: 50%;
 }
