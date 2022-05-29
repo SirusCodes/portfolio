@@ -14,14 +14,59 @@ body {
     background-color: black;
 }
 
-.nav-bar {
+.site {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-block {
+    display: flex;
+    width: 10%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 3%;
+}
+
+.contact i {
+    padding: 40% 20%;
+    font-size: 2.2vw;
+    transition: transform 0.3s ease-in, color 0.2s ease-in;
+}
+
+.contact a {
+    transform: translateX(-10vw);
+    animation: 1s ease-in 1 slide forwards;
+    animation-delay: calc(var(--animation-pos) * 100ms);
+}
+
+.contact-line {
+    position: fixed;
+    background-color: white;
+    width: 1.5px;
+    top: 0;
+    bottom: 0;
+    left: 4%;
+    animation: 0.8s ease-in 0s 1 topToBottomLine;
+}
+
+.navbar {
+    width: 20%;
+}
+
+.navbar-list {
     position: fixed;
     right: 0;
     top: 0;
     bottom: 0;
-    left: 80%;
     list-style: none;
     padding: 10px;
+    width: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +74,7 @@ body {
     color: white;
 }
 
-.nav-bar li a {
+.navbar li a {
     font-size: 1.2vw;
     display: block;
     text-decoration: none;
@@ -46,11 +91,22 @@ body {
     transform: translateY(-5px) scale(1.1);
 }
 
+/* Content */
+
+
 #home {
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+h1 {
+    font-size: 2.2vw;
+}
+
+#home h2 {
+    font-size: 1.5vw;
 }
 
 #home img {
@@ -78,42 +134,12 @@ body {
 
 .about-desc p {
     text-align: justify;
-    width: 50%;
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    width: 3%;
-}
-
-.contact i {
-    padding: 40% 20%;
-    font-size: 2.2vw;
-    transition: transform 0.3s ease-in, color 0.2s ease-in;
-}
-
-.contact a {
-    transform: translateX(-10vw);
-    animation: 1s ease-in 1 slide forwards;
-    animation-delay: calc(var(--animation-pos) * 100ms);
+    width: 60%;
+    font-size: 1.5vw;
 }
 
 h3 {
     margin-bottom: 0px;
-}
-
-.contact-line {
-    position: fixed;
-    background-color: white;
-    width: 1.5px;
-    top: 0;
-    bottom: 0;
-    left: 4%;
-    animation: 0.8s ease-in 0s 1 topToBottomLine;
 }
 
 @keyframes slide {
@@ -126,6 +152,7 @@ h3 {
     0% {
         bottom: 100vh;
     }
+
     100% {
         bottom: 0px;
     }

@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darshan Rander</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     </style>
@@ -16,140 +17,169 @@
 
 <body>
 
-    <ul class="nav-bar">
-        <li><a href="#home" style="--animation-pos:1;">Home</a></li>
-        <li><a href="#about" style="--animation-pos:2;">About me</a></li>
-        <li><a href="#experience" style="--animation-pos:3;">Experience</a></li>
-        <li><a href="#projects" style="--animation-pos:4;">Projects</a></li>
-    </ul>
+    <div class="site">
 
-    <div class="contact">
-        <a href="https://linkedin.com/in/darshan-rander" target="_blank" style="--animation-pos:1;">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/SirusCodes" target="_blank" style="--animation-pos:2;">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://twitter.com/SirusTweets" target="_blank" style="--animation-pos:3;">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="mailto:darshandrander@gmail.com" target="_blank" style="--animation-pos:4;">
-            <i class="fas fa-envelope"></i>
-        </a>
-    </div>
+        <div class="contact-block">
 
-    <div class="contact-line"></div>
-
-    <div id="home">
-        <div>
-            <h1>Hey there! I'm Darshan Rander</h1>
-            <h2>A software developer</h2>
-        </div>
-        <img src="src/img/darshan.jpg" alt="Darshan Rander" />
-    </div>
-
-    <div id="about">
-        <h1>About me</h1>
-
-        <div class="about-desc">
-            <p>
-                Hello, I'm Darshan from Thadomal Shahani Engineering College (TSEC), Mumbai. I'm a third year engineering student. I'm a passionate software developer. I have deep interest in App Development and also dipped my toes into Web Development. Majorly into
-                backend development.
-            </p>
-        </div>
-    </div>
-
-    <section id="experience">
-        <h1>Experience</h1>
-
-        <div class="cards-wrapper">
-
-            <div class="card">
-                <img loading="lazy" src="/src/img/nymble-logo.png" alt="Nymble" />
-                <div class="info">
-                    <div class="name">Nymble</div>
-                    <div class="description">
-                        <li>Working on a Flutter app which will work along with an IoT device named Julia a cooking robot.
-                        </li>
-                        <li>Working with GraphQL APIs</li>
-                        <li>Experiencing a work environment of a fast paced development lifecycle</li>
-                    </div>
-                    <div class="links">
-                        <a href="https://www.eatwithnymble.com/" target="_blank" rel="noreferrer">eatwithnymble.com</a>
-                    </div>
-
-                    <div class="project-tag">June 2021 - February 2022</div>
-                </div>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="/src/img/bttc-logo.png" alt="Bombay Teacher's Training College" />
-                <div class="info">
-                    <div class="name">Bombay Teacher's Training College</div>
-                    <div class="description">
-                        <li>Worked on a Android project with Firebase integration</li>
-                        <li>Lead a team of 4 Android developers</li>
-                    </div>
-                    <div class="links">
-                        <a href="https://bttc.edu/" target="_blank" rel="noreferrer">bttc.edu</a>
-                    </div>
-
-                    <div class="project-tag">July 2020 - August 2020</div>
-                </div>
-
-    </section>
-
-    <section id="projects">
-        <h1>Projects</h1>
-
-        <div class="cards-wrapper">
-
-            <div class="card">
-                <img loading="lazy" src="/src/img/heartry.png" alt="Heartry" />
-                <div class="info">
-                    <div class="name">Heartry</div>
-                    <div class="description">
-                        <li>Developing an app for writers so they can share their art easily on social media platforms.
-                        </li>
-                        <li>Implementing Google Drive to backup user data to maintain user privacy along with backup functionality
-                        </li>
-                        <li>Made an screen to make a custom images for sharing.</li>
-                    </div>
-                    <div class="links">
-                        <a href="https://play.google.com/store/apps/details?id=com.darshan.heartry" target="_blank" rel="noreferrer"><i class="fa-brands fa-google-play"></i> Play store</a>,
-                        <a href="https://github.com/SirusCodes/heartry" target="_blank" rel="noreferrer"><i
-                                class="fab fa-github"></i> GitHub</a>
-                    </div>
-                    <div class="project-tags">
-                        <div class="project-tag">Flutter</div>
-                        <div class="project-tag">Google Drive</div>
-                        <div class="project-tag">Android</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="/src/img/stocker.png" alt="Stocker" />
-                <div class="info">
-                    <div class="name">Stocker</div>
-                    <div class="description">
-                        <li>Stocker is an app to manage stocks easily</li>
-                        <li>It also stores all the transactions made by the application</li>
-                        <li>An auto-generated invoice is sent to the buyer once the transaction is complete</li>
-                    </div>
-                    <div class="links">
-                        <a href="https://play.google.com/store/apps/details?id=com.darshan.heartry" target="_blank" rel="noreferrer"><i class="fa-brands fa-google-play"></i> Play store</a>,
-                        <a href="https://github.com/SirusCodes/heartry" target="_blank" rel="noreferrer"><i
-                                class="fab fa-github"></i> GitHub</a>
-                    </div>
-                    <div class="project-tags">
-                        <div class="project-tag">Flutter</div>
-                        <div class="project-tag">Appwrite</div>
-                        <div class="project-tag">Python</div>
-                    </div>
-                </div>
+            <div class="contact">
+                <a href="https://linkedin.com/in/darshan-rander" target="_blank" style="--animation-pos:1;">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/SirusCodes" target="_blank" style="--animation-pos:2;">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/SirusTweets" target="_blank" style="--animation-pos:3;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:darshandrander@gmail.com" target="_blank" style="--animation-pos:4;">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
 
+            <div class="contact-line"></div>
+
         </div>
-    </section>
+
+
+        <div class="content">
+
+            <section id="home">
+                <div>
+                    <h1>Hey there! I'm Darshan Rander</h1>
+                    <h2>A software developer </h2>
+                </div>
+                <img src="src/img/darshan.jpg" alt="Darshan Rander" />
+            </section>
+
+            <section id="about">
+                <h1>About me</h1>
+
+                <div class="about-desc">
+                    <p>
+                        Hello, I'm Darshan from Thadomal Shahani Engineering College (TSEC), Mumbai. I'm a third year
+                        engineering student. I'm a passionate software developer. I have deep interest in App
+                        Development and also dipped my toes into Web Development. Majorly into
+                        backend development.
+                    </p>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h1>Experience</h1>
+
+                <div class="cards-wrapper">
+
+                    <div class="card">
+                        <img loading="lazy" src="/src/img/nymble-logo.png" alt="Nymble" />
+                        <div class="info">
+                            <div class="name">Nymble</div>
+                            <div class="description">
+                                <li>Working on a Flutter app which will work along with an IoT device named Julia a
+                                    cooking robot.
+                                </li>
+                                <li>Working with GraphQL APIs</li>
+                                <li>Experiencing a work environment of a fast paced development lifecycle</li>
+                            </div>
+                            <div class="links">
+                                <a href="https://www.eatwithnymble.com/" target="_blank"
+                                    rel="noreferrer">eatwithnymble.com</a>
+                            </div>
+
+                            <div class="project-tag">June 2021 - February 2022</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img loading="lazy" src="/src/img/bttc-logo.png" alt="Bombay Teacher's Training College" />
+                        <div class="info">
+                            <div class="name">Bombay Teacher's Training College</div>
+                            <div class="description">
+                                <li>Worked on a Android project with Firebase integration</li>
+                                <li>Lead a team of 4 Android developers</li>
+                            </div>
+                            <div class="links">
+                                <a href="https://bttc.edu/" target="_blank" rel="noreferrer">bttc.edu</a>
+                            </div>
+
+                            <div class="project-tag">July 2020 - August 2020</div>
+                        </div>
+
+            </section>
+
+            <section id="projects">
+                <h1>Projects</h1>
+
+                <div class="cards-wrapper">
+
+                    <div class="card">
+                        <img loading="lazy" src="/src/img/heartry.png" alt="Heartry" />
+                        <div class="info">
+                            <div class="name">Heartry</div>
+                            <div class="description">
+                                <li>Developing an app for writers so they can share their art easily on social media
+                                    platforms.
+                                </li>
+                                <li>Implementing Google Drive to backup user data to maintain user privacy along with
+                                    backup functionality
+                                </li>
+                                <li>Made an screen to make a custom images for sharing.</li>
+                            </div>
+                            <div class="links">
+                                <a href="https://play.google.com/store/apps/details?id=com.darshan.heartry"
+                                    target="_blank" rel="noreferrer"><i class="fa-brands fa-google-play"></i> Play
+                                    store</a>,
+                                <a href="https://github.com/SirusCodes/heartry" target="_blank" rel="noreferrer"><i
+                                        class="fab fa-github"></i> GitHub</a>
+                            </div>
+                            <div class="project-tags">
+                                <div class="project-tag">Flutter</div>
+                                <div class="project-tag">Google Drive</div>
+                                <div class="project-tag">Android</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img loading="lazy" src="/src/img/stocker.png" alt="Stocker" />
+                        <div class="info">
+                            <div class="name">Stocker</div>
+                            <div class="description">
+                                <li>Stocker is an app to manage stocks easily</li>
+                                <li>It also stores all the transactions made by the application</li>
+                                <li>An auto-generated invoice is sent to the buyer once the transaction is complete</li>
+                            </div>
+                            <div class="links">
+                                <a href="https://play.google.com/store/apps/details?id=com.darshan.heartry"
+                                    target="_blank" rel="noreferrer"><i class="fa-brands fa-google-play"></i> Play
+                                    store</a>,
+                                <a href="https://github.com/SirusCodes/heartry" target="_blank" rel="noreferrer"><i
+                                        class="fab fa-github"></i> GitHub</a>
+                            </div>
+                            <div class="project-tags">
+                                <div class="project-tag">Flutter</div>
+                                <div class="project-tag">Appwrite</div>
+                                <div class="project-tag">Python</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </div>
+
+
+
+        <div class="navbar">
+            <ul class="navbar-list">
+                <li><a href="#home" style="--animation-pos:1;">Home</a></li>
+                <li><a href="#about" style="--animation-pos:2;">About me</a></li>
+                <li><a href="#experience" style="--animation-pos:3;">Experience</a></li>
+                <li><a href="#projects" style="--animation-pos:4;">Projects</a></li>
+            </ul>
+        </div>
+
+    </div>
+
 
     <script src="src/main.js"></script>
 </body>
