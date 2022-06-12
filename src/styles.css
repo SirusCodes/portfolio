@@ -33,6 +33,10 @@ body {
     width: 3%;
 }
 
+.menu {
+    display: none;
+}
+
 .contact i {
     padding: 40% 20%;
     font-size: 2.2vw;
@@ -144,7 +148,7 @@ h3 {
 
 @keyframes slide {
     100% {
-        transform: translateX(0vw);
+        transform: translateX(0vw) translateY(0);
     }
 }
 
@@ -174,7 +178,7 @@ h3 {
 
 .cards-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2em;
     padding: 2em 0 5em 0;
     align-items: stretch;
@@ -235,4 +239,106 @@ i:hover {
 
 .info .description {
     margin-bottom: 2em;
+}
+
+@media screen and (max-width: 900px) {
+    .site {
+        flex-direction: column;
+    }
+
+    .contact-line {
+        display: none;
+    }
+
+    #home {
+        padding: 0 10%;
+        flex-direction: column-reverse;
+    }
+
+    h1 {
+        font-size: 3.2vh;
+    }
+
+    #home h2 {
+        font-size: 2vh;
+    }
+
+    #home img {
+        width: auto;
+        height: 40%;
+        border-radius: 50%;
+    }
+
+    .about-desc p {
+        text-align: justify;
+        width: 60%;
+        font-size: 1.9vh;
+    }
+
+    .description,
+    .links {
+        margin-bottom: 1em;
+        line-height: 1.4em;
+        font-size: 1.9vh;
+        font-size: clamp(15px, 2vw, 17px);
+    }
+
+    .project-tag {
+        font-size: 1.9vh;
+    }
+
+    .menu {
+        display: block
+    }
+
+    .contact {
+        z-index: 2;
+        flex-direction: row;
+        background-color: rgb(38, 38, 38);
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .contact i {
+        font-size: 4vh;
+        transition: transform 0.3s ease-in, color 0.2s ease-in;
+    }
+
+    .contact a {
+        transform: translateY(10vh);
+    }
+
+    .navbar-list {
+        z-index: 1;
+        background-color: rgb(19, 19, 19);
+        top: auto;
+        bottom: 7vh;
+        width: 100%;
+        justify-content: end;
+        align-items: center;
+        color: white;
+        margin: 0;
+        transform: translateY(40vh);
+    }
+
+    .navbar li a {
+        width: 100%;
+        font-size: 3vh;
+        padding: 10% 0;
+        display: block;
+        text-decoration: none;
+        color: white;
+        transform: none;
+    }
+
+    .navbar-list.open {
+        transform: translateY(40vh);
+        animation: .8s ease-in 1 slide forwards;
+    }
+
+    .nav-bar li a:hover,
+    .contact i:hover {
+        color: white;
+        transform: none;
+    }
 }
