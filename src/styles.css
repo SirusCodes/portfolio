@@ -260,7 +260,7 @@ i:hover {
     }
 
     #home h2 {
-        font-size: 2vh;
+        font-size: 2.2vh;
     }
 
     #home img {
@@ -272,7 +272,7 @@ i:hover {
     .about-desc p {
         text-align: justify;
         width: 60%;
-        font-size: 1.9vh;
+        font-size: 2.2vh;
     }
 
     .description,
@@ -280,15 +280,25 @@ i:hover {
         margin-bottom: 1em;
         line-height: 1.4em;
         font-size: 1.9vh;
-        font-size: clamp(15px, 2vw, 17px);
     }
 
     .project-tag {
-        font-size: 1.9vh;
+        font-size: 2vh;
+    }
+
+    .cards-wrapper {
+        width: 90%;
     }
 
     .menu {
-        display: block
+        font-size: 1.2vw;
+        display: block;
+        text-decoration: none;
+        color: white;
+        transform: translateY(10vh);
+        transition: transform 0.3s ease-in, color 0.2s ease-in;
+        animation: 1s ease-in 1 slide forwards;
+        animation-delay: calc(var(--animation-pos) * 100ms);
     }
 
     .contact {
