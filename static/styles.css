@@ -11,6 +11,31 @@
     --shape-color: #222222
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll bar */
+
+body::-webkit-scrollbar {
+    width: 0.7em;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--shape-color);
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #757575;
+}
+
+/* Main CSS */
+
 body {
     padding: 0px;
     margin: 0px;
