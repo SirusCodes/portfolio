@@ -6,12 +6,14 @@
 
 :root {
     --accent-color: #88d3ff;
+    --material-black: #121212;
+    --material-white: #ffffff;
 }
 
 body {
     padding: 0px;
     margin: 0px;
-    background-color: black;
+    background-color: var(--material-black);
 }
 
 .site {
@@ -124,6 +126,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 #about {
@@ -131,15 +134,17 @@ h1 {
 }
 
 .about-desc {
+    color: wheat;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 60%;
+    line-height: 1.6em;
+    font-size: 1.25vw;
 }
 
-.about-desc p {
-    text-align: justify;
-    width: 60%;
-    font-size: 1.5vw;
+.about-desc b {
+    color: var(--material-white);
 }
 
 h3 {
@@ -269,9 +274,8 @@ i:hover {
         border-radius: 50%;
     }
 
-    .about-desc p {
-        text-align: justify;
-        width: 60%;
+    .about-desc {
+        width: 85%;
         font-size: 2.2vh;
     }
 
