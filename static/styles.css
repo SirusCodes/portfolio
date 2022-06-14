@@ -8,6 +8,7 @@
     --accent-color: #88d3ff;
     --material-black: #121212;
     --material-white: #ffffff;
+    --shape-color: #222222
 }
 
 body {
@@ -191,6 +192,7 @@ h3 {
 }
 
 .card {
+    background-color: var(--material-black);
     padding: 1em;
     border: 1px solid white;
     border-radius: 5px;
@@ -244,6 +246,36 @@ i:hover {
 
 .info .description {
     margin-bottom: 2em;
+}
+
+/* Background shapes */
+.rrect {
+    z-index: -1;
+    position: fixed;
+    width: 22vw;
+    height: 22vw;
+    outline-style: solid;
+    outline-width: 1.5vw;
+    outline-color: var(--shape-color);
+    border-radius: 25%;
+}
+
+.rrect1 {
+    top: -8vw;
+    left: 0;
+    transform: rotateZ(30deg);
+}
+
+.rrect2 {
+    bottom: -20vh;
+    left: 30vw;
+    transform: rotateZ(-10deg);
+}
+
+.rrect3 {
+    top: -20vh;
+    right: 10vw;
+    transform: rotateZ(-35deg);
 }
 
 @media screen and (max-width: 900px) {
@@ -354,5 +386,31 @@ i:hover {
     .contact i:hover {
         color: white;
         transform: none;
+    }
+
+    .rrect {
+        z-index: -1;
+        width: 30vw;
+        height: 30vw;
+        outline-width: 1.5vh;
+        border-radius: 25%;
+    }
+
+    .rrect1 {
+        top: -8vh;
+        left: 0;
+        transform: rotateZ(30deg);
+    }
+
+    .rrect2 {
+        bottom: -0vh;
+        left: 30vw;
+        transform: rotateZ(-10deg);
+    }
+
+    .rrect3 {
+        top: 30vh;
+        right: 0vw;
+        transform: rotateZ(-35deg);
     }
 }
