@@ -8,7 +8,7 @@
     --accent-color: #88d3ff;
     --material-black: #121212;
     --material-white: #ffffff;
-    --shape-color: #222222
+    --shape-color: #222222;
 }
 
 html {
@@ -40,6 +40,10 @@ body {
     padding: 0px;
     margin: 0px;
     background-color: var(--material-black);
+}
+
+a:hover {
+    color: var(--accent-color);
 }
 
 .site {
@@ -223,6 +227,10 @@ h3 {
     border-radius: 5px;
 }
 
+.card ul {
+    padding-left: 20px;
+}
+
 .card img {
     width: 100%;
     height: auto;
@@ -245,8 +253,11 @@ h3 {
     font-size: clamp(15px, 2vw, 17px);
 }
 
-.links a:hover,
-i:hover {
+.links i {
+    text-decoration: none;
+}
+
+.links a:hover {
     color: var(--accent-color);
 }
 
