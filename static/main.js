@@ -22,4 +22,10 @@ const menu = document.querySelector(".menu");
 menu.addEventListener("click", (e) => {
 	const navbar = document.querySelector(".navbar-list");
 	navbar.classList.toggle("open");
+	e.stopPropagation();
+});
+
+window.addEventListener("click", () => {
+	const navbar = document.querySelector(".navbar-list");
+	navbar.classList.remove("open");
 });
