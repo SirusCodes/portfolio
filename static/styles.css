@@ -20,6 +20,10 @@ a {
     text-decoration-thickness: 1px;
 }
 
+h1 {
+    font-size: 2.2vw;
+}
+
 /* Scroll bar */
 
 body::-webkit-scrollbar {
@@ -140,7 +144,7 @@ a:hover {
     align-items: center;
 }
 
-h1 {
+#home h1 {
     font-size: 5vw;
     line-height: 1vw;
 }
@@ -290,6 +294,13 @@ h3 {
 
 .info .description {
     margin-bottom: 2em;
+}
+
+.quote {
+    margin-bottom: 5vh;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: normal;
+    text-align: center;
 }
 
 /* Background shapes */
