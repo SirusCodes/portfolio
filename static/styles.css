@@ -15,6 +15,11 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+}
+
 /* Scroll bar */
 
 body::-webkit-scrollbar {
@@ -107,14 +112,12 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    color: white;
 }
 
 .navbar li a {
     font-size: 1.2vw;
     display: block;
     text-decoration: none;
-    color: white;
     transform: translateX(10vw);
     transition: transform 0.3s ease-in, color 0.2s ease-in;
     animation: 1s ease-in 1 slide forwards;
@@ -138,11 +141,12 @@ a:hover {
 }
 
 h1 {
-    font-size: 2.2vw;
+    font-size: 5vw;
+    line-height: 1vw;
 }
 
 #home h2 {
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 
 #home img {
@@ -175,6 +179,10 @@ h1 {
 
 .about-desc b {
     color: var(--material-white);
+}
+
+.about-desc a {
+    font-weight: bold;
 }
 
 h3 {
