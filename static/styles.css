@@ -302,11 +302,13 @@ h3 {
 }
 
 .quote {
-    display: block;
-    margin-bottom: 10vh;
+    display: flex;
+    height: 10vh;
     font-size: clamp(1rem, 1.5vw, 2rem);
     font-weight: normal;
+    align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 /* Background shapes */
@@ -456,6 +458,11 @@ h3 {
     .contact i:hover {
         color: white;
         transform: none;
+    }
+
+    .quote {
+        position: relative;
+        bottom: 7vh;
     }
 
     .rrect {
