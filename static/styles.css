@@ -160,7 +160,8 @@ a:hover {
 
 #about,
 #experience,
-#projects {
+#projects,
+#talks {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,6 +192,10 @@ a:hover {
 
 h3 {
     margin-bottom: 0px;
+}
+
+#talks {
+    width: 100%;
 }
 
 @keyframes slide {
@@ -229,7 +234,7 @@ h3 {
     gap: 2em;
     padding: 2em 0 5em 0;
     align-items: stretch;
-    width: 70%;
+    width: 80%;
 }
 
 .card {
@@ -298,7 +303,7 @@ h3 {
 
 .quote {
     display: block;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
     font-size: clamp(1rem, 1.5vw, 2rem);
     font-weight: normal;
     text-align: center;
@@ -335,6 +340,10 @@ h3 {
 }
 
 @media screen and (max-width: 900px) {
+    h1 {
+        font-size: 3.2vh;
+    }
+
     .site {
         flex-direction: column;
     }
@@ -348,8 +357,9 @@ h3 {
         flex-direction: column-reverse;
     }
 
-    h1 {
-        font-size: 3.2vh;
+    #home h1 {
+        font-size: 5vh;
+        line-height: 1vw;
     }
 
     #home h2 {
@@ -420,7 +430,7 @@ h3 {
         align-items: center;
         color: white;
         margin: 0;
-        transform: translateY(40vh);
+        transform: translateY(60vh);
     }
 
     .navbar li a {
@@ -434,7 +444,7 @@ h3 {
     }
 
     .navbar-list.open {
-        transform: translateY(40vh);
+        transform: translateY(60vh);
         animation: .8s ease-in 1 slide forwards;
     }
 
