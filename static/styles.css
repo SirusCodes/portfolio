@@ -297,6 +297,7 @@ h3 {
 }
 
 .quote {
+    display: block;
     margin-bottom: 5vh;
     font-size: clamp(1rem, 1.5vw, 2rem);
     font-weight: normal;
