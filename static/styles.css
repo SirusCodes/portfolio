@@ -176,7 +176,7 @@ a:hover {
     color: wheat;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 60%;
     line-height: 1.6em;
     font-size: 1.25vw;
@@ -370,6 +370,10 @@ h3 {
         width: auto;
         height: 40%;
         border-radius: 50%;
+    }
+
+    #about h2 {
+        font-size: 2.5vh;
     }
 
     .about-desc {
