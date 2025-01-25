@@ -250,7 +250,8 @@ h3 {
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: contain;
     margin-bottom: 1em;
     border-radius: 5px;
 }
