@@ -28,6 +28,19 @@ const data = [
 	</ul>
 </nav>
 
+<script>
+	import { $isNavOpen } from "../stores";
+	const navbar = document.querySelector(".navbar-list")!;
+
+	$isNavOpen.subscribe((value) => {
+		if (value) {
+			navbar.classList.add("open");
+		} else {
+			navbar.classList.remove("open");
+		}
+	});
+</script>
+
 <style>
 	.navbar {
 		width: 20%;
@@ -57,5 +70,40 @@ const data = [
 			color 0.2s ease-in;
 		animation: 1s ease-in 1 slide forwards;
 		animation-delay: calc(var(--animation-pos) * 100ms);
+	}
+
+	@media screen and (max-width: 900px) {
+		.navbar-list {
+			z-index: 1;
+			background-color: rgb(19, 19, 19);
+			top: auto;
+			bottom: 7vh;
+			width: 100%;
+			justify-content: end;
+			align-items: center;
+			color: white;
+			margin: 0;
+			transform: translateY(60vh);
+		}
+
+		.navbar li a {
+			width: 100%;
+			font-size: 3vh;
+			padding: 10% 0;
+			display: block;
+			text-decoration: none;
+			color: white;
+			transform: none;
+		}
+
+		.navbar-list.open {
+			transform: translateY(60vh);
+			animation: 0.8s ease-in 1 slide forwards;
+		}
+
+		.nav-bar li a:hover {
+			color: white;
+			transform: none;
+		}
 	}
 </style>

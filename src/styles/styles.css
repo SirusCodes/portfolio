@@ -62,10 +62,6 @@ a:hover {
 
 
 /* Content */
-
-
-
-
 #about,
 #experience,
 #projects,
@@ -164,116 +160,6 @@ h3 {
 
     .site {
         flex-direction: column;
-    }
-
-    .contact-line {
-        display: none;
-    }
-
-    #home {
-        padding: 0 10%;
-        flex-direction: column-reverse;
-    }
-
-    #home h1 {
-        font-size: 5vh;
-        line-height: 1em;
-    }
-
-    #home h2 {
-        font-size: 2.2vh;
-    }
-
-    #home img {
-        width: auto;
-        height: 40%;
-        border-radius: 50%;
-    }
-
-    #about h2 {
-        font-size: 2.5vh;
-    }
-
-    .about-desc {
-        width: 85%;
-        font-size: 2.2vh;
-    }
-
-    .description,
-    .links {
-        margin-bottom: 1em;
-        line-height: 1.4em;
-        font-size: 1.9vh;
-    }
-
-    .project-tag {
-        font-size: 2vh;
-    }
-
-    .cards-wrapper {
-        width: 90%;
-    }
-
-    .menu {
-        font-size: 1.2vw;
-        display: block;
-        text-decoration: none;
-        color: white;
-        transform: translateY(10vh);
-        transition: transform 0.3s ease-in, color 0.2s ease-in;
-        animation: 1s ease-in 1 slide forwards;
-        animation-delay: calc(var(--animation-pos) * 100ms);
-    }
-
-    .contact {
-        z-index: 2;
-        flex-direction: row;
-        background-color: rgb(38, 38, 38);
-        justify-content: space-evenly;
-        width: 100%;
-    }
-
-    .contact i {
-        font-size: 4vh;
-        transition: transform 0.3s ease-in, color 0.2s ease-in;
-    }
-
-    .contact a {
-        transform: translateY(10vh);
-    }
-
-    .navbar-list {
-        z-index: 1;
-        background-color: rgb(19, 19, 19);
-        top: auto;
-        bottom: 7vh;
-        width: 100%;
-        justify-content: end;
-        align-items: center;
-        color: white;
-        margin: 0;
-        transform: translateY(60vh);
-    }
-
-    .navbar li a {
-        width: 100%;
-        font-size: 3vh;
-        padding: 10% 0;
-        display: block;
-        text-decoration: none;
-        color: white;
-        transform: none;
-    }
-
-    .navbar-list.open {
-        transform: translateY(60vh);
-        animation: .8s ease-in 1 slide forwards;
-    }
-
-    .nav-bar li a:hover,
-    .contact i:hover {
-        color: white;
-        transform: none;
     }
 
     .quote {

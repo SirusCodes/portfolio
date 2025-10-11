@@ -49,6 +49,16 @@ const data = [
 	<div class="contact-line"></div>
 </div>
 
+<script>
+	import { $isNavOpen } from "../stores";
+	const menu = document.querySelector(".menu")!;
+
+	menu.addEventListener("click", (e) => {
+		$isNavOpen.set(!$isNavOpen.get());
+		e.preventDefault();
+	});
+</script>
+
 <style>
 	.contact-block {
 		display: flex;
@@ -95,5 +105,48 @@ const data = [
 	.contact i:hover {
 		color: var(--accent-color);
 		transform: translateY(-5px) scale(1.1);
+	}
+
+	@media screen and (max-width: 900px) {
+		.contact-line {
+			display: none;
+		}
+
+		.contact i:hover {
+			color: white;
+			transform: none;
+		}
+
+		.contact {
+			z-index: 2;
+			flex-direction: row;
+			background-color: rgb(38, 38, 38);
+			justify-content: space-evenly;
+			width: 100%;
+		}
+
+		.contact i {
+			font-size: 4vh;
+			transition:
+				transform 0.3s ease-in,
+				color 0.2s ease-in;
+		}
+
+		.contact a {
+			transform: translateY(10vh);
+		}
+
+		.menu {
+			font-size: 1.2vw;
+			display: block;
+			text-decoration: none;
+			color: white;
+			transform: translateY(10vh);
+			transition:
+				transform 0.3s ease-in,
+				color 0.2s ease-in;
+			animation: 1s ease-in 1 slide forwards;
+			animation-delay: calc(var(--animation-pos) * 100ms);
+		}
 	}
 </style>

@@ -117,4 +117,17 @@ const { name, tags, image, links, description } = Astro.props;
 	.info .description {
 		margin-bottom: 2em;
 	}
+
+	@media screen and (max-width: 900px) {
+		.project-tag {
+			font-size: 2vh;
+		}
+
+		.description,
+		.links {
+			margin-bottom: 1em;
+			line-height: 1.4em;
+			font-size: 1.9vh;
+		}
+	}
 </style>
