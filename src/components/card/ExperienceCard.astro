@@ -8,8 +8,9 @@ type Props = {
 	};
 	description: string[];
 	link: { href: string; text: string };
+	position: string;
 };
-const { name, years, image, description, link } = Astro.props;
+const { name, years, image, description, link, position } = Astro.props;
 ---
 
 <div class="card">
@@ -21,7 +22,7 @@ const { name, years, image, description, link } = Astro.props;
 		alt={image.alt}
 	/>
 	<div class="info">
-		<div class="name">{name}</div>
+		<div class="name">{name} - {position}</div>
 		<ul class="description">
 			{description.map((item) => <li>{item}</li>)}
 		</ul>

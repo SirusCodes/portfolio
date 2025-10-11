@@ -1,67 +1,27 @@
 ---
+import { getCollection } from "astro:content";
 import CardsWrapper from "../card/CardsWrapper.astro";
 import ExperienceCard from "../card/ExperienceCard.astro";
+
+const experience = await getCollection("experience");
 ---
 
 <section id="experience">
 	<h1>Experience</h1>
 
 	<CardsWrapper>
-		<ExperienceCard
-			name="UBS"
-			years="Aug 2023 – Present"
-			image={{ src: "images/ubs-logo.webp", alt: "UBS" }}
-			description={[
-				"Awarded the Engineering Excellence Award for contributions to our suite of applications.",
-				"Migrated frontend applications from on-premises servers to cloud.",
-				"Improved application’s Time to Interactivity by 30% by implementing code splitting and reducing bundle size.",
-				"Built a user feedback mechanism with LLM-based filtering, summarization, and report generation."
-			]}
-			link={{ href: "https://ubs.com/", text: "ubs.com" }}
-		/>
-
-		<ExperienceCard
-			name="Stratzy"
-			years="Mar 2023 – Jul 2023"
-			image={{ src: "images/stratzy-logo.png", alt: "Stratzy Logo" }}
-			description={[
-				"Reduced crash rate by 50% using Firebase Crash Analytics to identify and fix crashes.",
-				"Spearheaded major refactoring in the codebase to reduce 5000+ compiler warnings to 500.",
-				"Built multi-theme support for different tiers of users.",
-				"Owned the implementation of the feature for investors to diversify their investments in low and high risk securities."
-			]}
-			link={{ href: "https://stratzy.in/", text: "stratzy.in" }}
-		/>
-
-		<ExperienceCard
-			name="Posha"
-			years="Jul 2021 – Feb 2022"
-			image={{ src: "images/nymble-logo.webp", alt: "Nymble" }}
-			description={[
-				"Developed a Flutter app for mobile and the embedded screen on Julia– Posha’s cutting-edge cooking robot.",
-				"Worked with GraphQL for hydrating data and implemented a caching layer improving data loading times.",
-				"Utilized Box2D Physics Engine to build a gamified user on-boarding."
-			]}
-			link={{
-				href: "https://www.eatwithnymble.com/",
-				text: "eatwithnymble.com"
-			}}
-		/>
-
-		<ExperienceCard
-			name="Bombay Teacher's Training College (BTTC)"
-			years="July 2020 - August 2020"
-			image={{
-				src: "images/bttc-logo.webp",
-				alt: "Bombay Teacher's Training College"
-			}}
-			description={[
-				"Developed an App for BTTC to help them communicate with students.",
-				"Lead a team of four Android Developers.",
-				"Worked on an Android Project with Firebase."
-			]}
-			link={{ href: "https://bttc.edu/", text: "bttc.edu" }}
-		/>
+		{
+			experience.map((item) => (
+				<ExperienceCard
+					name={item.data.name}
+					years={item.data.years}
+					position={item.data.position}
+					image={item.data.image}
+					description={item.data.description}
+					link={item.data.link}
+				/>
+			))
+		}
 	</CardsWrapper>
 </section>
 

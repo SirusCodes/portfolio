@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "astro": "^5.14.4",
+    "js-yaml": "^4.1.0",
     "nanostores": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9"
   }
 }
