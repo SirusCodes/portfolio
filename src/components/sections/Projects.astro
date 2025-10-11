@@ -1,0 +1,91 @@
+---
+import CardsWrapper from "../card/CardsWrapper.astro";
+import ProjectCard from "../card/ProjectCard.astro";
+---
+
+<section id="projects">
+	<h1>Projects</h1>
+
+	<CardsWrapper>
+		<ProjectCard
+			name="Heartry"
+			tags={["Flutter", "Google Drive", "Android"]}
+			image={{ src: "images/heartry.webp", alt: "Heartry" }}
+			links={[
+				{
+					icon: "fab fa-google-play",
+					href: "https://play.google.com/store/apps/details?id=com.darshan.heartry",
+					text: "Playstore"
+				},
+				{
+					icon: "fab fa-github",
+					href: "https://github.com/SirusCodes/heartry",
+					text: "GitHub"
+				}
+			]}
+			description={[
+				"45k+ organic installs on Google Play Store and 5k+ Monthly Active Users (MAU).",
+				"Enables users to create images from customizable templates for their social media.",
+				"Implemented auto-backups to Google Drive to align with a privacy-first approach."
+			]}
+		/>
+
+		<ProjectCard
+			name="AntiLang"
+			tags={["Go", "WASM"]}
+			image={{ src: "images/antilang.jpg", alt: "AntiLang" }}
+			links={[
+				{
+					icon: "fas fa-globe",
+					href: "https://siruscodes.github.io/AntiLang/",
+					text: "Online Interpreter"
+				},
+				{
+					icon: "fab fa-github",
+					href: "https://github.com/SirusCodes/antilang",
+					text: "GitHub"
+				}
+			]}
+			description={[
+				"An interpreted esoteric programming language written in Go that is logically correct but syntactically reversed.",
+				"Developed a custom lexer, parser, and evaluator for the language along with an online code editor embedded with interpreter.",
+				"The interpreter is compiled for all platforms and also to natively run in browsers using WASM."
+			]}
+		/>
+
+		<ProjectCard
+			name="PicArch"
+			tags={["Python", "PyTorch", "Postgres", "pgvector"]}
+			links={[
+				{
+					icon: "fab fa-github",
+					href: "https://github.com/SirusCodes/picarch",
+					text: "GitHub"
+				}
+			]}
+			description={[
+				"Python-based face detection and face similarity search tool.",
+				"Integrated InsightFace, a prebuilt model for face encoding and pgvector for efficient storing of image vector embeddings.",
+				"Built to search a given face on a photo library based on faces detected."
+			]}
+		/>
+
+		<ProjectCard
+			name="Stocker"
+			tags={["Flutter", "Appwrite", "Python"]}
+			image={{ src: "images/stocker.webp", alt: "Stocker" }}
+			links={[
+				{
+					icon: "fab fa-github",
+					href: "https://github.com/SirusCodes/stocker",
+					text: "GitHub"
+				}
+			]}
+			description={[
+				"Stocker is an App to manage inventory.",
+				"Gives a graphical representation of sales.",
+				"Auto-generated invoice sent to the buyer"
+			]}
+		/>
+	</CardsWrapper>
+</section>

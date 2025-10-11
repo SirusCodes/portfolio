@@ -1,0 +1,91 @@
+---
+type Props = {
+	name: string;
+	years: string;
+	image: {
+		src: string;
+		alt: string;
+	};
+	description: string[];
+	link: { href: string; text: string };
+};
+const { name, years, image, description, link } = Astro.props;
+---
+
+<div class="card">
+	<img
+		width="100%"
+		height="auto"
+		loading="lazy"
+		src={image.src}
+		alt={image.alt}
+	/>
+	<div class="info">
+		<div class="name">{name}</div>
+		<ul class="description">
+			{description.map((item) => <li>{item}</li>)}
+		</ul>
+		<div class="links">
+			<a href={link.href} target="_blank" rel="noreferrer">{link.text}</a>
+		</div>
+		<div class="years">{years}</div>
+	</div>
+</div>
+
+<style>
+	.card {
+		background-color: var(--material-black);
+		padding: 1em;
+		border: 1px solid white;
+		border-radius: 5px;
+	}
+
+	.card ul {
+		padding-left: 20px;
+	}
+
+	.card img {
+		width: 100%;
+		height: 200px;
+		object-fit: contain;
+		margin-bottom: 1em;
+		border-radius: 5px;
+	}
+
+	.name {
+		margin-bottom: 1em;
+		font-weight: bold;
+		font-size: 20px;
+		font-size: clamp(18px, 2vw, 20px);
+	}
+
+	.description,
+	.links {
+		margin-bottom: 1em;
+		line-height: 1.4em;
+		font-size: 16px;
+		font-size: clamp(15px, 2vw, 17px);
+	}
+
+	.links i {
+		text-decoration: none;
+	}
+
+	.links a:hover {
+		color: var(--accent-color);
+	}
+
+	.years {
+		background-color: #4242425e;
+		width: fit-content;
+		padding: 0.4em 1em;
+		margin-right: 0.5em;
+		margin-top: 0.5em;
+		border-radius: 1em;
+		line-height: 1.5em;
+	}
+
+	.info .description {
+		margin-bottom: 2em;
+	}
+</style>

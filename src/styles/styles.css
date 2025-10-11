@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+:root {
+    --accent-color: #88d3ff;
+    --material-black: #121212;
+    --material-white: #ffffff;
+    --shape-color: #222222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+}
+
+h1 {
+    font-size: 2.2vw;
+}
+
+/* Scroll bar */
+
+body::-webkit-scrollbar {
+    width: 0.7em;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--shape-color);
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #757575;
+}
+
+/* Main CSS */
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--material-black);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.site {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Content */
+
+
+
+
+#about,
+#experience,
+#projects,
+#talks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+h3 {
+    margin-bottom: 0px;
+}
+
+#talks {
+    width: 100%;
+}
+
+@keyframes slide {
+    100% {
+        transform: translateX(0vw) translateY(0);
+    }
+}
+
+@keyframes topToBottomLine {
+    0% {
+        bottom: 100vh;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 0.3s ease-in, transform 0.5s ease-in;
+}
+
+.fade.appear {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+/* PROJECTS */
+
+
+.quote {
+    display: flex;
+    height: 10vh;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: normal;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Background shapes */
+.rrect {
+    z-index: -1;
+    position: fixed;
+    width: 22vw;
+    height: 22vw;
+    outline-style: solid;
+    outline-width: 1.5vw;
+    outline-color: var(--shape-color);
+    border-radius: 25%;
+}
+
+.rrect1 {
+    top: -8vw;
+    left: 0;
+    transform: rotateZ(30deg);
+}
+
+.rrect2 {
+    bottom: -20vh;
+    left: 30vw;
+    transform: rotateZ(-10deg);
+}
+
+.rrect3 {
+    top: -20vh;
+    right: 10vw;
+    transform: rotateZ(-35deg);
+}
+
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 3.2vh;
+    }
+
+    .site {
+        flex-direction: column;
+    }
+
+    .contact-line {
+        display: none;
+    }
+
+    #home {
+        padding: 0 10%;
+        flex-direction: column-reverse;
+    }
+
+    #home h1 {
+        font-size: 5vh;
+        line-height: 1em;
+    }
+
+    #home h2 {
+        font-size: 2.2vh;
+    }
+
+    #home img {
+        width: auto;
+        height: 40%;
+        border-radius: 50%;
+    }
+
+    #about h2 {
+        font-size: 2.5vh;
+    }
+
+    .about-desc {
+        width: 85%;
+        font-size: 2.2vh;
+    }
+
+    .description,
+    .links {
+        margin-bottom: 1em;
+        line-height: 1.4em;
+        font-size: 1.9vh;
+    }
+
+    .project-tag {
+        font-size: 2vh;
+    }
+
+    .cards-wrapper {
+        width: 90%;
+    }
+
+    .menu {
+        font-size: 1.2vw;
+        display: block;
+        text-decoration: none;
+        color: white;
+        transform: translateY(10vh);
+        transition: transform 0.3s ease-in, color 0.2s ease-in;
+        animation: 1s ease-in 1 slide forwards;
+        animation-delay: calc(var(--animation-pos) * 100ms);
+    }
+
+    .contact {
+        z-index: 2;
+        flex-direction: row;
+        background-color: rgb(38, 38, 38);
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .contact i {
+        font-size: 4vh;
+        transition: transform 0.3s ease-in, color 0.2s ease-in;
+    }
+
+    .contact a {
+        transform: translateY(10vh);
+    }
+
+    .navbar-list {
+        z-index: 1;
+        background-color: rgb(19, 19, 19);
+        top: auto;
+        bottom: 7vh;
+        width: 100%;
+        justify-content: end;
+        align-items: center;
+        color: white;
+        margin: 0;
+        transform: translateY(60vh);
+    }
+
+    .navbar li a {
+        width: 100%;
+        font-size: 3vh;
+        padding: 10% 0;
+        display: block;
+        text-decoration: none;
+        color: white;
+        transform: none;
+    }
+
+    .navbar-list.open {
+        transform: translateY(60vh);
+        animation: .8s ease-in 1 slide forwards;
+    }
+
+    .nav-bar li a:hover,
+    .contact i:hover {
+        color: white;
+        transform: none;
+    }
+
+    .quote {
+        position: relative;
+        bottom: 7vh;
+    }
+
+    .rrect {
+        z-index: -1;
+        width: 30vw;
+        height: 30vw;
+        outline-width: 1.5vh;
+        border-radius: 25%;
+    }
+
+    .rrect1 {
+        top: -8vh;
+        left: 0;
+        transform: rotateZ(30deg);
+    }
+
+    .rrect2 {
+        bottom: -0vh;
+        left: 30vw;
+        transform: rotateZ(-10deg);
+    }
+
+    .rrect3 {
+        top: 30vh;
+        right: 0vw;
+        transform: rotateZ(-35deg);
+    }
+}

@@ -1,0 +1,99 @@
+---
+const data = [
+	{
+		title: "LinkedIn Profile",
+		name: "LinkedIn",
+		icon: "fab fa-linkedin",
+		link: "https://linkedin.com/in/darshan-rander"
+	},
+	{
+		title: "GitHub Profile",
+		name: "GitHub",
+		icon: "fab fa-github",
+		link: "https://github.com/SirusCodes"
+	},
+	{
+		title: "X Profile",
+		name: "X",
+		icon: "fab fa-x-twitter",
+		link: "https://x.com/SirusTweets"
+	},
+	{
+		title: "Send Email",
+		name: "Email",
+		icon: "fas fa-envelope",
+		link: "mailto:darshandrander@outlook.com"
+	}
+];
+---
+
+<div class="contact-block">
+	<div class="contact">
+		{
+			data.map((item, index) => (
+				<a
+					title={item.title}
+					href={item.link}
+					target="_blank"
+					style={`--animation-pos:${index + 1};`}
+				>
+					<i class={item.icon} />
+				</a>
+			))
+		}
+		<div class="menu" style="--animation-pos:5;">
+			<i class="fa-solid fa-bars"></i>
+		</div>
+	</div>
+
+	<div class="contact-line"></div>
+</div>
+
+<style>
+	.contact-block {
+		display: flex;
+		width: 10%;
+	}
+
+	.contact {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		bottom: 0;
+		width: 3%;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.contact i {
+		padding: 40% 20%;
+		font-size: 2.2vw;
+		transition:
+			transform 0.3s ease-in,
+			color 0.2s ease-in;
+	}
+
+	.contact a {
+		transform: translateX(-10vw);
+		animation: 1s ease-in 1 slide forwards;
+		animation-delay: calc(var(--animation-pos) * 100ms);
+	}
+
+	.contact-line {
+		position: fixed;
+		background-color: white;
+		width: 1.5px;
+		top: 0;
+		bottom: 0;
+		left: 4%;
+		animation: 0.8s ease-in 0s 1 topToBottomLine;
+	}
+
+	.contact i:hover {
+		color: var(--accent-color);
+		transform: translateY(-5px) scale(1.1);
+	}
+</style>

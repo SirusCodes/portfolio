@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactSideBar from "../components/ContactSideBar.astro";
+import NavBar from "../components/NavBar.astro";
+import AboutMe from "../components/sections/AboutMe.astro";
+import Home from "../components/sections/Home.astro";
+import Experience from "../components/sections/Experience.astro";
+import Projects from "../components/sections/Projects.astro";
+import Talks from "../components/sections/Talks.astro";
+---
+
+<BaseLayout>
+	<ContactSideBar />
+
+	<div class="content">
+		<Home />
+		<AboutMe />
+		<Experience />
+		<Projects />
+		<Talks />
+
+		<div class="quote">~ Believe in You ~</div>
+		<NavBar />
+	</div>
+</BaseLayout>
