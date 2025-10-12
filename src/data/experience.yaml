@@ -1,15 +1,32 @@
 - name: UBS
   inResume: true
   years: Aug 2023 – Present
-  position: Software Engineer
+  location: Pune, Maharashtra
+  position: Software Developer Engineer
   image:
       src: images/ubs-logo.webp
       alt: UBS
   description:
       - Awarded the Engineering Excellence Award for contributions to our suite of applications.
-      - Migrated frontend applications from on-premises servers to cloud.
-      - Improved application’s Time to Interactivity by 30% by implementing code splitting and reducing bundle size.
-      - Built a user feedback mechanism with LLM-based filtering, summarization, and report generation.
+      - Working on micro-frontend architecture using React.js and Angular.
+      - Building a user feedback mechanism with LLM based filtering, summarization and report generation.
+      - Migrated our frontend applications from on-premises servers to cloud.
+      - Improved application's Time to Interactivity by 30%, by implementing code splitting and reducing bundle size.
+  link:
+      href: https://ubs.com
+      text: ubs.com
+
+- name: UBS
+  inResume: true
+  years: Apr 2022 – Jun 2022
+  location: Remote
+  position: Summer Intern
+  image:
+      src: images/ubs-logo.webp
+      alt: UBS
+  description:
+      - Developed an Observability stack to monitor and analyze logs of our applications.
+      - Reduced crash recovery and diagnostic time from over 2 hours to under 3 minutes (over 40x reduction).
   link:
       href: https://ubs.com
       text: ubs.com
@@ -17,6 +34,7 @@
 - name: Stratzy
   inResume: true
   years: Mar 2023 – Jul 2023
+  location: Thane, Maharashtra
   position: Fullstack Developer Intern
   image:
       src: images/stratzy-logo.png
@@ -33,6 +51,7 @@
 - name: Posha
   inResume: true
   years: Jul 2021 – Feb 2022
+  location: Remote
   position: Flutter Developer Intern
   image:
       src: images/posha-logo.webp
@@ -47,6 +66,7 @@
 
 - name: Bombay Teacher's Training College (BTTC)
   years: July 2020 - August 2020
+  location: Mumbai, Maharashtra
   position: Android Developer Intern
   image:
       src: images/bttc-logo.webp

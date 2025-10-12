@@ -1,5 +1,6 @@
 - name: Heartry
   inResume: true
+  timeline: Jan 2021 -- Ongoing
   tags:
       - Flutter
       - Google Drive
@@ -21,6 +22,7 @@
 
 - name: AntiLang
   inResume: true
+  timeline: Feb 2025
   tags:
       - Golang
       - WASM
@@ -41,6 +43,7 @@
 
 - name: PicArch
   inResume: true
+  timeline: Mar 2025
   tags:
       - Python
       - PyTorch
@@ -56,6 +59,7 @@
       - Built to search a given face on a photo library based on faces detected.
 
 - name: Stocker
+  timeline: Jun 2023
   tags:
       - Flutter
       - Appwrite

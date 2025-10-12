@@ -1,6 +1,7 @@
 import { file } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 import yaml from "js-yaml";
+import { time } from "node:console";
 
 const customParser = (content: string): any[] => {
 	const data = yaml.load(content) as any[];
@@ -19,6 +20,7 @@ const experience = defineCollection({
 		id: z.number(),
 		name: z.string(),
 		years: z.string(),
+		location: z.string(),
 		position: z.string(),
 		image: z.object({
 			src: z.string(),
@@ -40,6 +42,7 @@ const projects = defineCollection({
 	schema: z.object({
 		id: z.number(),
 		name: z.string(),
+		timeline: z.string().optional(),
 		description: z.array(z.string()),
 		tags: z.array(z.string()),
 		image: z
