@@ -80,7 +80,7 @@ const customParser = (text: string) => {
 };
 
 export const buildResume = async () => {
-	const base = await readFile("src/pages/resume.tex/base.tex", "utf-8");
+	const base = await readFile("src/pages/resume.tex/_base.tex", "utf-8");
 	return customParser(base);
 };
 
