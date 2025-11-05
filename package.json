@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",
-    "astro": "^5.14.4",
+    "astro": "^5.15.3",
     "astro-robots-txt": "^1.0.0",
     "js-yaml": "^4.1.0",
     "nanostores": "^1.0.1"
