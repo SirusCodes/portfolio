@@ -1,0 +1,62 @@
+- event: Mumbai Women Coders November'22 Meetup
+  title: Server-side Dart
+  inResume: false
+  date: 2022-11-12
+  links:
+      - href: https://1drv.ms/p/s!Ai1OliGaJWO-4BkJPPQdQUXfPDm3?e=NYPj74&nav=eyJzSWQiOjI5NiwiY0lkIjoyMTMxNjY5NDEwfQ
+        text: Slides
+      - href: https://blog.darshanrander.com/posts/tech/serverside-dart/
+        text: Blog
+  image:
+      href: images/mwc-server-side-dart.jpg
+      alt: Server-side Dart at Mumbai Women Coders November'22 Meetup
+
+- event: CodeVengers Flutter and Dart Basics
+  title: Flutter and Dart Basics
+  inResume: false
+  date: 2020-09-02
+  links:
+      - href: https://www.youtube.com/watch?v=2L09M_DwstE
+        text: YouTube
+  image:
+      href: images/codevengers-flutter-dart-basics.jpg
+      alt: Flutter and Dart Basics
+
+- event: "Our Tech Community Meetup #5"
+  title: "Building AntiLang: A language in reverse"
+  inResume: true
+  date: 2025-04-12
+  links:
+      - href: https://1drv.ms/p/c/be63259a21964e2d/EQKJqiDJUJ5Lq4Gys3qxu80BIoOqYcCJn1g-8rpShvRvYw
+        text: Slides
+      - href: https://blog.darshanrander.com/posts/tech/how-i-wrote-my-language/
+        text: Blog
+  image:
+      href: https://siruscodes.github.io/AntiLang/assets/logo.png
+      alt: AntiLang Logo
+
+- event: Flutter Roadshow Mumbai
+  title: Animating Flutter Canvas
+  inResume: true
+  date: 2024-12-06
+  links:
+      - href: https://1drv.ms/p/c/be63259a21964e2d/ES1OliGaJWMggL7uMQAAAAABDknAWtB7TwtAUTm6HWMtig?e=kZp9Sh
+        text: Slides
+      - href: https://blog.darshanrander.com/posts/tech/animating-canvas-in-flutter/
+        text: Blog
+  image:
+      href: images/flutter-roadshow-mumbai-2024.jpg
+      alt: Animating Flutter Canvas at Flutter Roadshow Mumbai 2024
+
+- event: Flutter Forward Extended Ahmedabad
+  title: Dart side backend
+  inResume: true
+  date: 2023-02-27
+  links:
+      - href: https://docs.google.com/presentation/d/1RmpGeuXkKDpBB6ShHgy3ePPfOhEQh-pFu4vhHsqVaqs/edit?usp=sharing
+        text: Slides
+      - href: https://blog.darshanrander.com/posts/tech/serverside-dart/
+        text: Blog
+  image:
+      href: images/flutter-ahmedabad-2023.jpg
+      alt: Dart side backend at Flutter Ahmedabad 2023

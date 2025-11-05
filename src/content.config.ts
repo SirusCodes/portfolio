@@ -1,7 +1,6 @@
 import { file } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 import yaml from "js-yaml";
-import { time } from "node:console";
 
 const customParser = (content: string): any[] => {
 	const data = yaml.load(content) as any[];
@@ -64,4 +63,27 @@ const projects = defineCollection({
 	})
 });
 
-export const collections = { experience, projects };
+const talksAndConferences = defineCollection({
+	loader: file("src/data/talks-and-conferences.yaml", {
+		parser: customParser
+	}),
+	schema: z.object({
+		id: z.number(),
+		event: z.string(),
+		title: z.string(),
+		inResume: z.boolean().optional().default(false),
+		date: z.date({ coerce: true }),
+		links: z.array(
+			z.object({
+				href: z.string(),
+				text: z.string()
+			})
+		),
+		image: z.object({
+			href: z.string(),
+			alt: z.string()
+		})
+	})
+});
+
+export const collections = { experience, projects, talksAndConferences };

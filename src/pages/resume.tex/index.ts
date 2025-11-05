@@ -10,6 +10,10 @@ const projects = await getCollection(
 	"projects",
 	(entry) => entry.data.inResume
 );
+const talks = await getCollection(
+	"talksAndConferences",
+	(entry) => entry.data.inResume
+);
 
 type ProjectData = (typeof projects)[number]["data"];
 
@@ -73,10 +77,38 @@ const buildProjects = () => {
 		.join("\\vspace{-15pt}\n\n");
 };
 
+const buildTalks = () => {
+	return talks
+		.map((talk) => {
+			const data = talk.data;
+			const dateFormatted = Intl.DateTimeFormat("en-US", {
+				month: "short",
+				year: "numeric"
+			}).format(new Date(data.date));
+
+			const links = data.links
+				?.map(
+					(link) =>
+						`\\href{${latexEscape(link.href)}}{${latexEscape(
+							link.text
+						)}}`
+				)
+				.join(", ");
+
+			return `\\resumeItem{\\textbf{${latexEscape(
+				data.title
+			)}} at ${latexEscape(data.event)} on ${latexEscape(
+				dateFormatted
+			)} - ${links} }`;
+		})
+		.join("\n\\vspace{-4pt}\n");
+};
+
 const customParser = (text: string) => {
 	return text
 		.replace("% {{EXPERIENCE}}", buildExperience())
-		.replace("% {{PROJECTS}}", buildProjects());
+		.replace("% {{PROJECTS}}", buildProjects())
+		.replace("% {{TALKS}}", buildTalks());
 };
 
 export const buildResume = async () => {
