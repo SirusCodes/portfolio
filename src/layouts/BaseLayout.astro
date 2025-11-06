@@ -1,5 +1,8 @@
 ---
+import astroConfig from "../../astro.config.mjs";
 import "../styles/styles.css";
+
+const site = astroConfig.site!;
 ---
 
 <!doctype html>
@@ -24,7 +27,7 @@ import "../styles/styles.css";
 		/>
 		<meta
 			property="twitter:image"
-			content="https://darshanrander.com/images/og-twitter.png"
+			content=`${site}/images/og-twitter.png`
 		/>
 
 		<!-- Facebook meta -->
@@ -40,11 +43,8 @@ import "../styles/styles.css";
 			property="og:description"
 			content="I'm a Software engineer who enjoys solving problems."
 		/>
-		<meta property="og:url" content="https://darshanrander.com" />
-		<meta
-			property="og:image"
-			content="https://darshanrander.com/images/og-general.png"
-		/>
+		<meta property="og:url" content={site} />
+		<meta property="og:image" content={`${site}/images/og-general.png`} />
 
 		<title>Darshan Rander</title>
 
