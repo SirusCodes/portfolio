@@ -1,8 +1,7 @@
 ---
-import astroConfig from "../../astro.config.mjs";
 import "../styles/styles.css";
 
-const site = astroConfig.site!;
+const site = Astro.site!.href;
 ---
 
 <!doctype html>
