@@ -42,7 +42,6 @@
       - The interpreter is compiled for all platforms and also to natively run in browsers using WASM.
 
 - name: PicArch
-  inResume: true
   timeline: Mar 2025
   tags:
       - Python
@@ -75,3 +74,24 @@
       - Stocker is an App to manage inventory.
       - Gives a graphical representation of sales.
       - Auto-generated invoice sent to the buyer
+
+- name: OwnDB
+  inResume: true
+  timeline: Jun 2025 - Dec 2025
+  tags:
+      - Nextjs
+      - HashiCorp Vault
+      - Postgres
+  image:
+      src: images/owndb.png
+      alt: OwnDB
+  links:
+      - icon: fas fa-globe
+        href: https://owndb.vercel.app/
+        text: Website
+      - icon: fas fa-globe
+        href: https://www.loom.com/share/e22f5d1094c84978b2eadc414d003be3
+        text: Demo Video
+  description:
+      - Built OwnDB, a backend system for automated PostgreSQL provisioning and lifecycle management on user-owned servers using SSH orchestration.
+      - Integrated HashiCorp Vault for secure secret management and achieved 1.9x cost savings vs AWS RDS by eliminating managed overhead.
