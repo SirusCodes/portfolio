@@ -8,6 +8,8 @@
     "dist"
   ],
   "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
     "allowJs": true,
     "strictNullChecks": true
   }
