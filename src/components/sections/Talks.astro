@@ -52,10 +52,21 @@ const talks = await getCollection("talksAndConferences");
 
 <style>
 	.card {
-		background-color: var(--material-black);
-		padding: 1em;
-		border: 1px solid white;
-		border-radius: 5px;
+		background-color: var(--card-bg);
+		padding: 1.5em;
+		border: var(--card-border);
+		border-radius: var(--card-radius);
+		backdrop-filter: blur(8px);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 12px 40px var(--glow-color);
+		border-color: rgba(136, 211, 255, 0.3);
 	}
 
 	.card ul {
