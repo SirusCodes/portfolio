@@ -9,7 +9,7 @@ on:
     workflow_dispatch:
 env:
     IS_GH_PAGES: true
-    PUBLIC_CHAT_API_BASE: https://chatabout-production.up.railway.app
+    PUBLIC_CHAT_API_URL: https://chatabout-production.up.railway.app
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
