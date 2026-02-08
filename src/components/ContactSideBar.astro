@@ -62,7 +62,6 @@ const data = [
 <style>
 	.contact-block {
 		display: flex;
-		width: 10%;
 	}
 
 	.contact {
@@ -72,6 +71,7 @@ const data = [
 		position: fixed;
 		bottom: 0;
 		width: 3%;
+		background-color: rgba(14, 14, 14, 0.96);
 	}
 
 	.menu {
@@ -81,9 +81,7 @@ const data = [
 	.contact i {
 		padding: 40% 20%;
 		font-size: 2.2vw;
-		transition:
-			transform 0.3s ease-in,
-			color 0.2s ease-in;
+		transition: transform 0.3s ease-in, color 0.2s ease-in;
 	}
 
 	.contact a {
@@ -120,16 +118,15 @@ const data = [
 		.contact {
 			z-index: 2;
 			flex-direction: row;
-			background-color: rgb(38, 38, 38);
+			background-color: rgba(14, 14, 14, 0.96);
 			justify-content: space-evenly;
 			width: 100%;
+			border-top: 1px solid #2a2a2a;
 		}
 
 		.contact i {
 			font-size: 4vh;
-			transition:
-				transform 0.3s ease-in,
-				color 0.2s ease-in;
+			transition: transform 0.3s ease-in, color 0.2s ease-in;
 		}
 
 		.contact a {
@@ -142,9 +139,7 @@ const data = [
 			text-decoration: none;
 			color: white;
 			transform: translateY(10vh);
-			transition:
-				transform 0.3s ease-in,
-				color 0.2s ease-in;
+			transition: transform 0.3s ease-in, color 0.2s ease-in;
 			animation: 1s ease-in 1 slide forwards;
 			animation-delay: calc(var(--animation-pos) * 100ms);
 		}
