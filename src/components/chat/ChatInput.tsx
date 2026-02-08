@@ -1,99 +1,71 @@
 /**
- * Chat input component
+ * Chat input component with form submission
  */
 
 import type { FunctionalComponent } from "preact";
-import { useState, useRef, useEffect } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
+import type { JSX } from "preact";
 
 interface ChatInputProps {
 	onSend: (message: string) => void;
-	disabled?: boolean;
-	placeholder?: string;
+	disabled: boolean;
+	placeholder: string;
 	initialValue?: string;
 }
 
 export const ChatInput: FunctionalComponent<ChatInputProps> = ({
 	onSend,
-	disabled = false,
-	placeholder = "Type your message...",
-	initialValue = ""
+	disabled,
+	placeholder,
+	initialValue
 }) => {
-	const [input, setInput] = useState(initialValue);
-	const textareaRef = useRef<HTMLTextAreaElement>(null);
+	const [inputValue, setInputValue] = useState("");
 
-	const handleSubmit = (e: Event) => {
-		e.preventDefault();
-		const trimmed = input.trim();
-		if (trimmed && !disabled) {
-			onSend(trimmed);
-			setInput("");
-
-			// Reset textarea height
-			if (textareaRef.current) {
-				textareaRef.current.style.height = "auto";
-			}
-		}
-	};
-
-	const handleKeyDown = (e: KeyboardEvent) => {
-		if (e.key === "Enter" && !e.shiftKey) {
-			e.preventDefault();
-			handleSubmit(e);
-		}
-	};
-
-	const handleInput = (e: Event) => {
-		const target = e.target as HTMLTextAreaElement;
-		setInput(target.value);
-
-		// Auto-resize textarea
-		target.style.height = "auto";
-		target.style.height = `${Math.min(target.scrollHeight, 200)}px`;
-	};
-
+	// Set initial value if provided
 	useEffect(() => {
-		if (!disabled && textareaRef.current) {
-			textareaRef.current.focus();
-		}
-	}, [disabled]);
-
-	// Set initial value when provided
-	useEffect(() => {
-		if (initialValue && !input) {
-			setInput(initialValue);
-			// Auto-resize for initial value
-			if (textareaRef.current) {
-				textareaRef.current.style.height = "auto";
-				textareaRef.current.style.height = `${Math.min(
-					textareaRef.current.scrollHeight,
-					200
-				)}px`;
-			}
+		if (initialValue) {
+			setInputValue(initialValue);
 		}
 	}, [initialValue]);
 
+	const handleSubmit = (event: JSX.TargetedEvent<HTMLFormElement, Event>) => {
+		event.preventDefault();
+		const trimmed = inputValue.trim();
+		if (trimmed && !disabled) {
+			onSend(trimmed);
+			setInputValue("");
+		}
+	};
+
+	const handleKeyDown = (event: JSX.TargetedKeyboardEvent<HTMLTextAreaElement>) => {
+		if (event.key === "Enter" && !event.shiftKey) {
+			event.preventDefault();
+			const trimmed = inputValue.trim();
+			if (trimmed && !disabled) {
+				onSend(trimmed);
+				setInputValue("");
+			}
+		}
+	};
+
 	return (
-		<form class="chat-input" onSubmit={handleSubmit}>
-			<div class="input-wrapper">
+		<form class="chat-input-bar" onSubmit={handleSubmit} autoComplete="off">
+			<div class="chat-input-wrap">
 				<textarea
-					ref={textareaRef}
-					value={input}
-					onInput={handleInput}
-					onKeyDown={handleKeyDown}
-					placeholder={placeholder}
-					disabled={disabled}
+					class="chat-input"
 					rows={1}
-					aria-label="Chat message input"
+					placeholder={placeholder}
+					value={inputValue}
+					onInput={(event) =>
+						setInputValue((event.target as HTMLTextAreaElement).value)
+					}
+					onKeyDown={handleKeyDown}
 				/>
-				<button
-					type="submit"
-					class="send-button"
-					disabled={!input.trim() || disabled}
-					aria-label="Send message"
-				>
+				<button class="chat-send" type="submit" disabled={disabled}>
 					Send
 				</button>
 			</div>
+			<div class="chat-hint">Enter to send, Shift+Enter for newline.</div>
 		</form>
 	);
 };

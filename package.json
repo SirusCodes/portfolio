@@ -15,12 +15,16 @@
     "@preact/signals": "^2.7.0",
     "astro": "^5.15.3",
     "astro-robots-txt": "^1.0.0",
+    "dompurify": "^3.3.1",
     "eventsource-parser": "^3.0.6",
     "js-yaml": "^4.1.0",
+    "marked": "^17.0.1",
     "nanostores": "^1.0.1",
     "preact": "^10.28.3"
   },
   "devDependencies": {
-    "@types/js-yaml": "^4.0.9"
+    "@types/dompurify": "^3.2.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/marked": "^6.0.0"
   }
 }
