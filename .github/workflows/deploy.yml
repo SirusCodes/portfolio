@@ -29,7 +29,7 @@ jobs:
               # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
               # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
               # env:
-              # PUBLIC_POKEAPI: 'https://pokeapi.co/api/v2' # Use single quotation marks for the variable value. (optional)
+              #     PUBLIC_CHAT_API_BASE: ${{ vars.PUBLIC_CHAT_API_BASE }} # Use single quotation marks for the variable value. (optional)
 
     deploy:
         needs: build
