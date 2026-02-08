@@ -6,8 +6,7 @@ import { ChatContainer } from "../components/chat/ChatContainer";
 const url = Astro.url;
 const promptParam = url.searchParams.get("prompt") || undefined;
 
-// API URL - you can make this configurable via environment variables
-const API_URL = import.meta.env.PUBLIC_CHAT_API_URL || "http://localhost:8000";
+const API_URL = import.meta.env.PUBLIC_CHAT_API_URL;
 ---
 
 <BaseLayout>

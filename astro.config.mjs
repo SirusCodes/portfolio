@@ -4,7 +4,6 @@ import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 import generatePDFFromTex from "./lib/integrations/generatePDFFromTex";
-import preact from "@astrojs/preact";
 
 const isGHPages = process.env.IS_GH_PAGES ?? false;
 // https://astro.build/config
