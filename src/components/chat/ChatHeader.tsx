@@ -3,16 +3,9 @@
  */
 
 import type { FunctionalComponent } from "preact";
-import { currentAction, isStreaming, toggleSidebar } from "../../lib/chat/store";
+import { toggleSidebar } from "../../lib/chat/store";
 
 export const ChatHeader: FunctionalComponent = () => {
-	const getStatusText = () => {
-		if (isStreaming.value) {
-			return "Streaming...";
-		}
-		return "Idle";
-	};
-
 	return (
 		<header class="chat-header">
 			<button
@@ -28,9 +21,6 @@ export const ChatHeader: FunctionalComponent = () => {
 				<div class="chat-subtitle">
 					Streaming assistant with thread history
 				</div>
-			</div>
-			<div class="chat-status" data-busy={isStreaming.value ? "true" : "false"}>
-				{getStatusText()}
 			</div>
 		</header>
 	);

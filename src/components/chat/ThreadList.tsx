@@ -5,7 +5,6 @@
 import type { FunctionalComponent } from "preact";
 import { computed } from "@preact/signals";
 import { conversations } from "../../lib/chat/store";
-import type { Conversation } from "../../lib/chat/types";
 
 interface ThreadListProps {
 	activeThreadId: string | null;

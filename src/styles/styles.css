@@ -181,4 +181,30 @@ h3 {
     .quote {
         margin-bottom: 20px;
     }
+
+    .rrect {
+        z-index: -1;
+        width: 30vw;
+        height: 30vw;
+        outline-width: 1.5vh;
+        border-radius: 25%
+    }
+
+    .rrect1 {
+        top: -8vh;
+        left: 0;
+        transform: rotate(30deg)
+    }
+
+    .rrect2 {
+        bottom: -0vh;
+        left: 30vw;
+        transform: rotate(-10deg)
+    }
+
+    .rrect3 {
+        top: 30vh;
+        right: 0vw;
+        transform: rotate(-35deg)
+    }
 }

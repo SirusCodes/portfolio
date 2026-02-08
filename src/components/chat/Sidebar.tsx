@@ -45,17 +45,17 @@ export const Sidebar: FunctionalComponent<SidebarProps> = ({
 
 	return (
 		<aside class={sidebarClass}>
-			<div class="chat-sidebar-title">Chat Threads</div>
+			<div class="chat-sidebar-title">Chat History</div>
 			<div class="chat-sidebar-actions">
 				<button class="chat-button" type="button" onClick={handleNewThread}>
-					New thread
+					New Conversation
 				</button>
 				<button
 					class="chat-button subtle"
 					type="button"
 					onClick={handleClearHistory}
 				>
-					Clear history
+					Clear
 				</button>
 			</div>
 			<ThreadList
