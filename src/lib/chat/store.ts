@@ -47,8 +47,9 @@ export function initializeChatStore(): void {
 
 // Auto-save effect (only after initialization)
 effect(() => {
+	const currentConversations = conversations.value;
 	if (isInitialized) {
-		saveConversations(conversations.value);
+		saveConversations(currentConversations);
 	}
 });
 

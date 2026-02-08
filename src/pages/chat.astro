@@ -10,6 +10,10 @@ const promptParam = url.searchParams.get("prompt") || undefined;
 const API_URL = import.meta.env.PUBLIC_CHAT_API_URL || "http://localhost:8000";
 ---
 
-<BaseLayout title="Chat - Darshan Rander">
-	<ChatContainer client:load initialPrompt={promptParam} apiUrl={API_URL} />
+<BaseLayout>
+	<ChatContainer
+		client:only="preact"
+		initialPrompt={promptParam}
+		apiUrl={API_URL}
+	/>
 </BaseLayout>
