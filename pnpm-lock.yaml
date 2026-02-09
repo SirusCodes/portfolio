@@ -17,6 +17,9 @@ importers:
       '@preact/signals':
         specifier: ^2.7.0
         version: 2.7.0(preact@10.28.3)
+      '@yeskunall/astro-umami':
+        specifier: ^0.0.7
+        version: 0.0.7(astro@5.17.1(@types/node@24.7.1)(rollup@4.52.4)(typescript@5.9.3))
       astro:
         specifier: ^5.17.1
         version: 5.17.1(@types/node@24.7.1)(rollup@4.52.4)(typescript@5.9.3)
@@ -702,6 +705,11 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+
+  '@yeskunall/astro-umami@0.0.7':
+    resolution: {integrity: sha512-8W/At28qKyPGepwvVumgJX0VZ0F9KK4M4zNDQfUZ3iBJpAKUTAkdIXM7i7I+PFsP7rXOo/AVgcDXDOv9L03QhQ==}
+    peerDependencies:
+      astro: ^3.0.0 || ^4.0.0 || ^5.0.0
 
   acorn@8.15.0:
     resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
@@ -2410,6 +2418,10 @@ snapshots:
   '@types/unist@3.0.3': {}
 
   '@ungap/structured-clone@1.3.0': {}
+
+  '@yeskunall/astro-umami@0.0.7(astro@5.17.1(@types/node@24.7.1)(rollup@4.52.4)(typescript@5.9.3))':
+    dependencies:
+      astro: 5.17.1(@types/node@24.7.1)(rollup@4.52.4)(typescript@5.9.3)
 
   acorn@8.15.0: {}
 
