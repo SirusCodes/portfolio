@@ -220,6 +220,7 @@
 .chat-telemetry {
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 8px;
     flex-wrap: wrap;
     margin-top: 8px;
@@ -300,25 +301,10 @@
 }
 
 .token-count {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    color: #888;
-    font-size: 0.75rem;
-}
-
-.token-icon {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.token-value {
     font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+    display: inline;
+    color: #535353;
     font-size: 0.75rem;
-}
-
-.token-count.input .token-icon {
-    filter: hue-rotate(180deg);
 }
 
 

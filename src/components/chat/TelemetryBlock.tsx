@@ -27,7 +27,9 @@ export const TelemetryBlock: FunctionalComponent<TelemetryBlockProps> = ({
 				case "received_prompt":
 					return "Thinking...";
 				case "calling_tool":
-					return toolName ? `🔧 Using ${toolName}` : "🔧 Using tool...";
+					return toolName
+						? `🔧 Using ${toolName}`
+						: "🔧 Using tool...";
 				case "generating":
 					return "✨ Generating response...";
 				case "processing":
@@ -72,14 +74,12 @@ export const TelemetryBlock: FunctionalComponent<TelemetryBlockProps> = ({
 				<div class="telemetry-tokens">
 					{inputTokens > 0 && (
 						<span class="token-count input">
-							<span class="token-icon">📥</span>
-							<span class="token-value">{inputTokens.toLocaleString()}</span>
+							Input Tokens: {inputTokens.toLocaleString()},
 						</span>
 					)}
 					{outputTokens > 0 && (
 						<span class="token-count output">
-							<span class="token-icon">📤</span>
-							<span class="token-value">{outputTokens.toLocaleString()}</span>
+							Output Tokens: {outputTokens.toLocaleString()}
 						</span>
 					)}
 				</div>
