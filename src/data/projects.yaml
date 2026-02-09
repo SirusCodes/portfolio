@@ -1,24 +1,46 @@
-- name: Heartry
+- name: ChatAbout
   inResume: true
-  timeline: Jan 2021 -- Ongoing
+  timeline: Feb 2026
   tags:
-      - Flutter
-      - Google Drive
-      - Android
+      - LangChain
+      - ChromaDB
+      - FastAPI
+      - PostgreSQL
+      - RAG
   image:
-      src: images/heartry.webp
-      alt: Heartry
+      src: images/chatabout.jpeg
+      alt: ChatAbout
   links:
-      - icon: fab fa-google-play
-        href: https://play.google.com/store/apps/details?id=com.darshan.heartry
-        text: Playstore
       - icon: fab fa-github
-        href: https://github.com/SirusCodes/heartry
+        href: https://github.com/SirusCodes/chatabout
         text: GitHub
+      - icon: fas fa-comment-alt
+        href: https://darshanrander.com/chat
+        text: Chat
   description:
-      - 45k+ organic installs on Google Play Store and 5k+ Monthly Active Users (MAU).
-      - Enables users to create images from customizable templates for their social media.
-      - Implemented auto-backups to Google Drive to align with a privacy-first approach.
+      - Engineered a production RAG chatbot with LangChain agents, vector search (Chroma), smart caching, and multi-LLM support to answer queries about portfolios and documents with cited sources and real-time streaming
+      - Built FastAPI service with persistent conversation threads, automated document ingestion pipeline, and tool-integrated agent architecture for intelligent information retrieval
+
+- name: OwnDB
+  inResume: true
+  timeline: Jun 2025 - Dec 2025
+  tags:
+      - Nextjs
+      - HashiCorp Vault
+      - PostgreSQL
+  image:
+      src: images/owndb.png
+      alt: OwnDB
+  links:
+      - icon: fas fa-globe
+        href: https://owndb.vercel.app/
+        text: Website
+      - icon: fas fa-globe
+        href: https://www.loom.com/share/e22f5d1094c84978b2eadc414d003be3
+        text: Demo Video
+  description:
+      - Built OwnDB, a backend system for automated PostgreSQL provisioning and lifecycle management on user-owned servers using SSH orchestration.
+      - Integrated HashiCorp Vault for secure secret management and achieved 1.9x cost savings vs AWS RDS by eliminating managed overhead.
 
 - name: AntiLang
   inResume: true
@@ -57,6 +79,28 @@
       - Integrated InsightFace, a prebuilt model for face encoding and pgvector for efficient storing of image vector embeddings.
       - Built to search a given face on a photo library based on faces detected.
 
+- name: Heartry
+  inResume: true
+  timeline: Jan 2021 -- Ongoing
+  tags:
+      - Flutter
+      - Google Drive
+      - Android
+  image:
+      src: images/heartry.webp
+      alt: Heartry
+  links:
+      - icon: fab fa-google-play
+        href: https://play.google.com/store/apps/details?id=com.darshan.heartry
+        text: Playstore
+      - icon: fab fa-github
+        href: https://github.com/SirusCodes/heartry
+        text: GitHub
+  description:
+      - 45k+ organic installs on Google Play Store and 5k+ Monthly Active Users (MAU).
+      - Enables users to create images from customizable templates for their social media.
+      - Implemented auto-backups to Google Drive to align with a privacy-first approach.
+
 - name: Stocker
   timeline: Jun 2023
   tags:
@@ -74,24 +118,3 @@
       - Stocker is an App to manage inventory.
       - Gives a graphical representation of sales.
       - Auto-generated invoice sent to the buyer
-
-- name: OwnDB
-  inResume: true
-  timeline: Jun 2025 - Dec 2025
-  tags:
-      - Nextjs
-      - HashiCorp Vault
-      - Postgres
-  image:
-      src: images/owndb.png
-      alt: OwnDB
-  links:
-      - icon: fas fa-globe
-        href: https://owndb.vercel.app/
-        text: Website
-      - icon: fas fa-globe
-        href: https://www.loom.com/share/e22f5d1094c84978b2eadc414d003be3
-        text: Demo Video
-  description:
-      - Built OwnDB, a backend system for automated PostgreSQL provisioning and lifecycle management on user-owned servers using SSH orchestration.
-      - Integrated HashiCorp Vault for secure secret management and achieved 1.9x cost savings vs AWS RDS by eliminating managed overhead.
