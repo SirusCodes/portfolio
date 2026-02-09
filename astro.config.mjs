@@ -18,7 +18,7 @@ export default defineConfig({
 		preact(),
 		sitemap(),
 		robotsTxt(),
-		// generatePDFFromTex(),
+		generatePDFFromTex(),
 		yeskunallumami({
 			id: "a9e17105-6708-419e-bba4-32930be50670",
 			endpointUrl: "https://analytics.darshanrander.com"
