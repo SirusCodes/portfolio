@@ -21,6 +21,7 @@ import {
 	useChatStreaming
 } from "../../lib/chat/hooks";
 import { useEffect, useRef } from "preact/hooks";
+import { SuggestionChips } from "./SuggestionChips";
 
 interface ChatContainerProps {
 	apiUrl: string;
@@ -66,12 +67,7 @@ export const ChatContainer: FunctionalComponent<ChatContainerProps> = ({
 						{conversation && conversation.messages.length > 0 ? (
 							<MessageList messages={conversation.messages} />
 						) : (
-							<div class="chat-message assistant">
-								<div class="chat-message-role">assistant</div>
-								<div class="chat-message-content">
-									Welcome! Start a conversation by typing a message below.
-								</div>
-							</div>
+							<SuggestionChips onSelected={handleSendMessage} />
 						)}
 					</div>
 

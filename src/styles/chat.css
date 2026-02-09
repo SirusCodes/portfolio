@@ -396,6 +396,32 @@
     pointer-events: auto;
 }
 
+.suggestion-chips {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.suggestion-chip {
+    background: var(--accent-color);
+    color: #0a0a0a;
+    border: none;
+    border-radius: 16px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.suggestion-chip:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px var(--glow-color);
+    border-color: rgba(136, 211, 255, 0.3);
+}
+
 @media screen and (max-width: 900px) {
     .chat-page {
         --chat-sidebar-width: 82vw;
