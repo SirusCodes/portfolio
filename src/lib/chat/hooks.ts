@@ -109,7 +109,7 @@ export function useChatStreaming(apiUrl: string) {
 	const handleSendMessage = async (message: string) => {
 		if (isStreaming.value) return;
 
-		window.umami?.track(`chat_message_${message}`);
+		window.umami?.track(`chat_message_${message.substring(0, 30)}`);
 
 		// Add user message
 		addUserMessage(message);
