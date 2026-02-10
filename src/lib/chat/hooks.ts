@@ -109,11 +109,13 @@ export function useChatStreaming(apiUrl: string) {
 	const handleSendMessage = async (message: string) => {
 		if (isStreaming.value) return;
 
+		window.umami?.track(`chat_message_${message}`);
+
 		// Add user message
 		addUserMessage(message);
 
-		// Prepare assistant message
-		const assistantMessage = addAssistantMessage();
+		// add assistant message
+		addAssistantMessage();
 
 		// Get current thread ID
 		const threadId = currentConversation.value?.id;
