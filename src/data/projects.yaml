@@ -1,4 +1,4 @@
-- name: ChatAbout
+- name: Wingman
   inResume: true
   timeline: Feb 2026
   tags:
@@ -8,11 +8,11 @@
       - PostgreSQL
       - RAG
   image:
-      src: images/chatabout.jpeg
-      alt: ChatAbout
+      src: images/wingman.jpeg
+      alt: Wingman
   links:
       - icon: fab fa-github
-        href: https://github.com/SirusCodes/chatabout
+        href: https://github.com/SirusCodes/wingman
         text: GitHub
       - icon: fas fa-comment-alt
         href: https://darshanrander.com/chat

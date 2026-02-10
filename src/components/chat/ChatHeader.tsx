@@ -17,7 +17,7 @@ export const ChatHeader: FunctionalComponent = () => {
 				<i class="fa-solid fa-bars"></i>
 			</button>
 			<div class="chat-title-group">
-				<div class="chat-title">ChatAbout</div>
+				<div class="chat-title">Wingman</div>
 				<div class="chat-subtitle">
 					Streaming assistant with thread history
 				</div>
