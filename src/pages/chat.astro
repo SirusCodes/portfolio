@@ -3,16 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/chat.css";
 import { ChatContainer } from "../components/chat/ChatContainer";
 
-const url = Astro.url;
-const promptParam = url.searchParams.get("prompt") || undefined;
-
 const API_URL = import.meta.env.PUBLIC_CHAT_API_URL;
 ---
 
 <BaseLayout>
-	<ChatContainer
-		client:only="preact"
-		initialPrompt={promptParam}
-		apiUrl={API_URL}
-	/>
+	<ChatContainer client:only="preact" apiUrl={API_URL} />
 </BaseLayout>

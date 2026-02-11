@@ -25,13 +25,15 @@ import { SuggestionChips } from "./SuggestionChips";
 
 interface ChatContainerProps {
 	apiUrl: string;
-	initialPrompt?: string;
 }
 
 export const ChatContainer: FunctionalComponent<ChatContainerProps> = ({
-	apiUrl,
-	initialPrompt
+	apiUrl
 }) => {
+	// Get initial prompt from URL
+	const initialPrompt =
+		new URLSearchParams(window.location.search).get("prompt") ?? undefined;
+
 	// Initialize chat store
 	useChatInit();
 
