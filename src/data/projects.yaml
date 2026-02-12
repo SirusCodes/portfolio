@@ -39,8 +39,8 @@
         href: https://www.loom.com/share/e22f5d1094c84978b2eadc414d003be3
         text: Demo Video
   description:
-      - Built OwnDB, a backend system for automated PostgreSQL provisioning and lifecycle management on user-owned servers using SSH orchestration.
-      - Integrated HashiCorp Vault for secure secret management and achieved 1.9x cost savings vs AWS RDS by eliminating managed overhead.
+      - Built OwnDB, a backend system for automated PostgreSQL provisioning and lifecycle management on user-owned servers using SSH orchestration
+      - Integrated HashiCorp Vault for secure secret management and achieved 1.9x cost savings vs AWS RDS by eliminating managed overhead
 
 - name: AntiLang
   inResume: true
@@ -59,9 +59,9 @@
         href: https://github.com/SirusCodes/antilang
         text: GitHub
   description:
-      - An interpreted esoteric programming language written in Go that is logically correct but syntactically reversed.
-      - Developed a custom lexer, parser, and evaluator for the language along with an online code editor embedded with interpreter.
-      - The interpreter is compiled for all platforms and also to natively run in browsers using WASM.
+      - An interpreted esoteric programming language written in Go that is logically correct but syntactically reversed
+      - Developed a custom lexer, parser, and evaluator for the language along with an online code editor embedded with interpreter
+      - The interpreter is compiled for all platforms and also to natively run in browsers using WASM
 
 - name: PicArch
   timeline: Mar 2025
@@ -75,9 +75,9 @@
         href: https://github.com/SirusCodes/picarch
         text: GitHub
   description:
-      - Python-based face detection and face similarity search tool.
-      - Integrated InsightFace, a prebuilt model for face encoding and pgvector for efficient storing of image vector embeddings.
-      - Built to search a given face on a photo library based on faces detected.
+      - Python-based face detection and face similarity search tool
+      - Integrated InsightFace, a prebuilt model for face encoding and pgvector for efficient storing of image vector embeddings
+      - Built to search a given face on a photo library based on faces detected
 
 - name: Heartry
   inResume: true
@@ -97,9 +97,9 @@
         href: https://github.com/SirusCodes/heartry
         text: GitHub
   description:
-      - 45k+ organic installs on Google Play Store and 5k+ Monthly Active Users (MAU).
-      - Enables users to create images from customizable templates for their social media.
-      - Implemented auto-backups to Google Drive to align with a privacy-first approach.
+      - 45k+ organic installs on Google Play Store and 5k+ Monthly Active Users (MAU)
+      - Enables users to create images from customizable templates for their social media
+      - Implemented auto-backups to Google Drive to align with a privacy-first approach
 
 - name: Stocker
   timeline: Jun 2023
@@ -115,6 +115,6 @@
         href: https://github.com/SirusCodes/stocker
         text: GitHub
   description:
-      - Stocker is an App to manage inventory.
-      - Gives a graphical representation of sales.
+      - Stocker is an App to manage inventory
+      - Gives a graphical representation of sales
       - Auto-generated invoice sent to the buyer

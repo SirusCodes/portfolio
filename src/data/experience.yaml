@@ -7,11 +7,12 @@
       src: images/ubs-logo.webp
       alt: UBS
   description:
-      - Awarded the Engineering Excellence Award for contributions to our suite of applications.
-      - Working on micro-frontend architecture using React.js and Angular.
-      - Building a user feedback mechanism with LLM based filtering, summarization and report generation.
-      - Migrated our frontend applications from on-premises servers to cloud.
-      - Improved application's Time to Interactivity by 30%, by implementing code splitting and reducing bundle size.
+      - Awarded the Engineering Excellence Award for contributions to our suite of applications
+      - Working on micro-frontend architecture using React.js and Angular
+      - Runner up for UBS Global hackathon'25 on building a fast and light design library and MCP server
+      - Built a user feedback mechanism with LLM based filtering, summarization and report generation
+      - Migrated our frontend applications from on-premises servers to cloud
+      - Improved application's Time to Interactivity by 30%, by implementing code splitting and reducing bundle size
   link:
       href: https://ubs.com
       text: ubs.com
@@ -25,8 +26,8 @@
       src: images/ubs-logo.webp
       alt: UBS
   description:
-      - Developed an Observability stack to monitor and analyze logs of our applications.
-      - Reduced crash recovery and diagnostic time from over 2 hours to under 3 minutes (over 40x reduction).
+      - Developed an Observability stack to monitor and analyze logs of our applications
+      - Reduced crash recovery and diagnostic time from over 2 hours to under 3 minutes (over 40x reduction)
   link:
       href: https://ubs.com
       text: ubs.com
@@ -40,10 +41,10 @@
       src: images/stratzy-logo.png
       alt: Stratzy Logo
   description:
-      - Reduced crash rate by 50% using Firebase Crash Analytics to identify and fix crashes.
-      - Spearheaded major refactoring in the codebase to reduce 5000+ compiler warnings to 500.
-      - Built multi-theme support for different tiers of users.
-      - Owned the implementation of the feature for investors to diversify their investments in low and high risk securities.
+      - Reduced crash rate by 50% using Firebase Crash Analytics to identify and fix crashes
+      - Spearheaded major refactoring in the codebase to reduce 5000+ compiler warnings to 500
+      - Built multi-theme support for different tiers of users
+      - Owned the implementation of the feature for investors to diversify their investments in low and high risk securities
   link:
       href: https://stratzy.in/
       text: stratzy.in
@@ -56,9 +57,9 @@
       src: images/posha-logo.webp
       alt: Posha
   description:
-      - Developed a Flutter app for mobile and the embedded screen on Julia– Posha’s cutting-edge cooking robot.
-      - Worked with GraphQL for hydrating data and implemented a caching layer improving data loading times.
-      - Utilized Box2D Physics Engine to build a gamified user on-boarding.
+      - Developed a Flutter app for mobile and the embedded screen on Julia– Posha’s cutting-edge cooking robot
+      - Worked with GraphQL for hydrating data and implemented a caching layer improving data loading times
+      - Utilized Box2D Physics Engine to build a gamified user on-boarding
   link:
       href: https://www.posha.com/
       text: posha.com
@@ -71,9 +72,9 @@
       src: images/bttc-logo.webp
       alt: Bombay Teacher's Training College
   description:
-      - Developed an App for BTTC to help them communicate with students.
-      - Lead a team of four Android Developers.
-      - Worked on an Android Project with Firebase.
+      - Developed an App for BTTC to help them communicate with students
+      - Lead a team of four Android Developers
+      - Worked on an Android Project with Firebase
   link:
       href: https://bttc.edu/
       text: bttc.edu
