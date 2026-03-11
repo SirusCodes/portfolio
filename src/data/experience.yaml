@@ -7,8 +7,8 @@
       src: images/ubs-logo.webp
       alt: UBS
   description:
-      - Building agentic self service chatbot for employee support using LangChain to ensure quick resolution and reduce ticket volume.
-      - Built a user feedback mechanism with LLM based filtering, summarization and report generation
+      - Building a LangChain-powered Agentic chatbot for automated employee support and ticket reduction.
+      - Developed a user feedback mechanism with LLM-based filtering, summarization, and report generation.
   link:
       href: https://ubs.com
       text: ubs.com
