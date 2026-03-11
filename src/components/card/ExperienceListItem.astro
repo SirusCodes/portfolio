@@ -1,0 +1,146 @@
+---
+import CollapsibleDescription from "../wrapper/CollapsibleDescription.astro";
+
+type Props = {
+	name: string;
+	years: string;
+	image: {
+		src: string;
+		alt: string;
+	};
+	description: string[];
+	link: { href: string; text: string };
+	position: string;
+};
+const { name, years, image, description, link, position } = Astro.props;
+---
+
+<div class="list-item">
+	<div class="list-item-logo">
+		<img loading="lazy" src={image.src} alt={image.alt} />
+	</div>
+	<div class="list-item-content">
+		<div class="list-item-header">
+			<div>
+				<div class="list-item-name">{name}</div>
+				<div class="list-item-position">{position}</div>
+			</div>
+			<div class="list-item-years">{years}</div>
+		</div>
+		<CollapsibleDescription
+			id={`exp-${name.replace(/\\s+/g, "-").toLowerCase()}-${position
+				.replace(/\\s+/g, "-")
+				.toLowerCase()}`}
+			description={description}
+		/>
+		<div class="list-item-links">
+			<a href={link.href} target="_blank" rel="noreferrer">{link.text}</a>
+		</div>
+	</div>
+</div>
+
+<style>
+	.list-item {
+		display: flex;
+		gap: 1.5em;
+		padding: 1.5em;
+		background-color: var(--card-bg);
+		border: var(--card-border);
+		border-radius: var(--card-radius);
+		backdrop-filter: blur(8px);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+		transition: transform 0.3s ease, box-shadow 0.3s ease,
+			border-color 0.3s ease;
+	}
+
+	.list-item:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 12px 40px var(--glow-color);
+		border-color: rgba(136, 211, 255, 0.3);
+	}
+
+	.list-item-logo {
+		flex-shrink: 0;
+		width: 64px;
+		height: 64px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.list-item-logo img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		border-radius: 12px;
+	}
+
+	.list-item-content {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.list-item-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 1em;
+		margin-bottom: 0.75em;
+	}
+
+	.list-item-name {
+		font-weight: 600;
+		font-size: clamp(18px, 2vw, 22px);
+		line-height: 1.3;
+	}
+
+	.list-item-position {
+		font-size: clamp(15px, 1.6vw, 18px);
+		color: var(--accent-color);
+		margin-top: 0.2em;
+	}
+
+	.list-item-years {
+		flex-shrink: 0;
+		background-color: #4242425e;
+		padding: 0.3em 0.8em;
+		border-radius: 1em;
+		font-size: clamp(13px, 1.3vw, 15px);
+		line-height: 1.5;
+		white-space: nowrap;
+	}
+
+	.list-item-links a {
+		font-size: clamp(15px, 1.6vw, 18px);
+		text-decoration-color: rgba(255, 255, 255, 0.3);
+		transition: color 0.2s ease;
+	}
+
+	.list-item-links a:hover {
+		color: var(--accent-color);
+	}
+
+	@media screen and (max-width: 900px) {
+		.list-item {
+			gap: 1em;
+			padding: 1.2em;
+		}
+
+		.list-item-logo {
+			width: 48px;
+			height: 48px;
+		}
+
+		.list-item-header {
+			flex-direction: column;
+			gap: 0.4em;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.list-item-logo {
+			width: 40px;
+			height: 40px;
+		}
+	}
+</style>
