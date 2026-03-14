@@ -1,0 +1,150 @@
+---
+interface Props {
+	id: string;
+	description: string[];
+}
+
+const { id, description } = Astro.props;
+---
+
+<div class="collapsible-container">
+	<div class="desc-wrapper" id={id}>
+		<ul class="description-list">
+			{description.map((item) => <li>{item}</li>)}
+		</ul>
+	</div>
+	<button
+		class="desc-toggle"
+		data-desc-target={id}
+		aria-label="Toggle description"
+		style="display:none"
+	>
+		Read more <i class="fas fa-chevron-down toggle-icon"></i>
+	</button>
+</div>
+
+<style>
+	.collapsible-container {
+		margin-bottom: 0.75em;
+	}
+
+	.desc-wrapper {
+		position: relative;
+		overflow: hidden;
+		transition: max-height 0.4s ease;
+	}
+
+	.desc-wrapper.is-overflowing::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 48px;
+		background: linear-gradient(to bottom, transparent, var(--card-bg));
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.4s ease;
+	}
+
+	.desc-wrapper.is-overflowing.collapsed {
+		max-height: 6em;
+	}
+
+	.desc-wrapper.is-overflowing.collapsed::after {
+		opacity: 1;
+	}
+
+	.description-list {
+		padding-left: 18px;
+		margin: 0;
+		line-height: 1.5;
+		font-size: clamp(15px, 1.6vw, 18px);
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	.description-list li {
+		margin-bottom: 0.25em;
+	}
+
+	.desc-toggle {
+		background: none;
+		border: none;
+		color: var(--accent-color);
+		font-family: "Poppins", sans-serif;
+		font-size: clamp(14px, 1.4vw, 16px);
+		cursor: pointer;
+		padding: 0.4em 0 0;
+		display: flex;
+		align-items: center;
+		gap: 0.3em;
+		opacity: 0.8;
+		transition: opacity 0.2s ease;
+	}
+
+	.desc-toggle:hover {
+		opacity: 1;
+	}
+
+	.toggle-icon {
+		font-size: 0.75em;
+		transition: transform 0.3s ease;
+	}
+</style>
+
+<script>
+	import { $cardStates, toggleCard } from "../../store/uiStore";
+
+	const wrappers = document.querySelectorAll<HTMLElement>(".desc-wrapper");
+	wrappers.forEach((wrapper) => {
+		if (wrapper.hasAttribute("data-bound")) return;
+		wrapper.setAttribute("data-bound", "true");
+
+		const ul = wrapper.querySelector("ul");
+		if (!ul) return;
+
+		// Apply classes to enforce the CSS max-height, allowing us to accurately measure overflow
+		wrapper.classList.add("is-overflowing", "collapsed");
+
+		requestAnimationFrame(() => {
+			if (wrapper.scrollHeight > wrapper.clientHeight) {
+				const btn =
+					wrapper.nextElementSibling as HTMLButtonElement | null;
+				if (btn?.classList.contains("desc-toggle")) {
+					btn.style.display = "flex";
+
+					const id = btn.getAttribute("data-desc-target");
+					if (!id) return;
+
+					btn.addEventListener("click", () => {
+						toggleCard(id);
+					});
+
+					$cardStates.subscribe((states) => {
+						const expanded = states[id] || false;
+						if (expanded) {
+							wrapper.classList.remove("collapsed");
+							wrapper.style.maxHeight = ul.scrollHeight + "px";
+							btn.firstChild!.textContent = "Show less ";
+							const icon = btn.querySelector(
+								".toggle-icon"
+							) as HTMLElement;
+							if (icon) icon.style.transform = "rotate(180deg)";
+						} else {
+							wrapper.classList.add("collapsed");
+							wrapper.style.maxHeight = "";
+							btn.firstChild!.textContent = "Read more ";
+							const icon = btn.querySelector(
+								".toggle-icon"
+							) as HTMLElement;
+							if (icon) icon.style.transform = "rotate(0deg)";
+						}
+					});
+				}
+			} else {
+				// Revert classes if the text didn't overflow the CSS bounds
+				wrapper.classList.remove("is-overflowing", "collapsed");
+			}
+		});
+	});
+</script>

@@ -1,0 +1,142 @@
+---
+interface Props {
+	id: string;
+	hasMore: boolean;
+	buttonText: string;
+}
+
+const { id, hasMore, buttonText } = Astro.props;
+---
+
+<div class="masonry-wrapper" id={`${id}-wrapper`}>
+	<div class="masonry-grid">
+		<slot />
+	</div>
+	{hasMore && <div class="fade-overlay" id={`${id}-fade`} />}
+</div>
+
+{
+	hasMore && (
+		<button
+			class="view-all-btn"
+			data-wrapper-id={id}
+			data-button-text={buttonText}
+		>
+			{buttonText}
+			<i class="fas fa-chevron-down btn-icon" />
+		</button>
+	)
+}
+
+<style>
+	.masonry-wrapper {
+		position: relative;
+		width: 80%;
+		max-height: 900px;
+		overflow: hidden;
+		transition: max-height 0.6s ease;
+	}
+
+	.masonry-grid {
+		column-count: 2;
+		column-gap: 1.5em;
+		padding: 2em 0 0 0;
+	}
+
+	:global(.masonry-item) {
+		break-inside: avoid;
+	}
+
+	.fade-overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 200px;
+		background: linear-gradient(
+			to bottom,
+			transparent 0%,
+			rgba(18, 18, 18, 0.6) 30%,
+			rgba(18, 18, 18, 0.95) 70%,
+			var(--material-black) 100%
+		);
+		pointer-events: none;
+		transition: opacity 0.4s ease;
+		z-index: 1;
+	}
+
+	.view-all-btn {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		margin-top: 1.2em;
+		padding: 0.7em 1.8em;
+		background: transparent;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		border-radius: 2em;
+		color: white;
+		font-family: "Poppins", sans-serif;
+		font-size: clamp(14px, 1.4vw, 16px);
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.view-all-btn:hover {
+		border-color: var(--accent-color);
+		color: var(--accent-color);
+		box-shadow: 0 0 20px var(--glow-color);
+	}
+
+	.btn-icon {
+		font-size: 0.8em;
+		transition: transform 0.3s ease;
+	}
+
+	@media screen and (max-width: 900px) {
+		.masonry-wrapper {
+			width: 90%;
+			max-height: 1500px;
+		}
+
+		.masonry-grid {
+			column-count: 1;
+		}
+	}
+</style>
+
+<script>
+	import { $sectionStates, toggleSection } from "../../store/uiStore";
+
+	const toggles = document.querySelectorAll(".view-all-btn");
+	toggles.forEach((btn) => {
+		if (btn.hasAttribute("data-bound")) return;
+		btn.setAttribute("data-bound", "true");
+		const id = btn.getAttribute("data-wrapper-id")!;
+		const defaultText = btn.getAttribute("data-button-text");
+		const wrapper = document.getElementById(`${id}-wrapper`);
+		const fade = document.getElementById(`${id}-fade`);
+
+		if (wrapper && fade && btn) {
+			const icon = btn.querySelector(".btn-icon") as HTMLElement | null;
+
+			btn.addEventListener("click", () => {
+				toggleSection(id);
+			});
+
+			$sectionStates.subscribe((states) => {
+				const expanded = states[id] || false;
+				if (expanded) {
+					wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+					fade.style.opacity = "0";
+					btn.firstChild!.textContent = "Show Less ";
+					if (icon) icon.style.transform = "rotate(180deg)";
+				} else {
+					wrapper.style.maxHeight = "";
+					fade.style.opacity = "1";
+					btn.firstChild!.textContent = defaultText + " ";
+					if (icon) icon.style.transform = "rotate(0deg)";
+				}
+			});
+		}
+	});
+</script>

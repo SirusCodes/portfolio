@@ -1,25 +1,32 @@
 ---
 import { getCollection } from "astro:content";
-import CardsWrapper from "../card/CardsWrapper.astro";
-import ProjectCard from "../card/ProjectCard.astro";
+import ProjectListItem from "../card/ProjectListItem.astro";
+import MasonryWrapper from "../wrapper/MasonryWrapper.astro";
 
 const projects = await getCollection("projects");
+const hasMore = projects.length > 4;
 ---
 
 <section id="projects">
 	<h1>Projects</h1>
 
-	<CardsWrapper>
+	<MasonryWrapper
+		id="projects"
+		hasMore={hasMore}
+		buttonText="View All Projects"
+	>
 		{
 			projects.map((item) => (
-				<ProjectCard
-					name={item.data.name}
-					tags={item.data.tags}
-					image={item.data.image}
-					links={item.data.links ?? []}
-					description={item.data.description}
-				/>
+				<div class="masonry-item">
+					<ProjectListItem
+						name={item.data.name}
+						tags={item.data.tags}
+						image={item.data.image}
+						links={item.data.links ?? []}
+						description={item.data.description}
+					/>
+				</div>
 			))
 		}
-	</CardsWrapper>
+	</MasonryWrapper>
 </section>

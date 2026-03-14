@@ -1,18 +1,23 @@
 ---
 import { getCollection } from "astro:content";
-import CardsWrapper from "../card/CardsWrapper.astro";
-import ExperienceCard from "../card/ExperienceCard.astro";
+import ExperienceListItem from "../card/ExperienceListItem.astro";
+import ListWrapper from "../wrapper/ListWrapper.astro";
 
 const experience = await getCollection("experience");
+const hasMore = experience.length > 4;
 ---
 
 <section id="experience">
 	<h1>Experience</h1>
 
-	<CardsWrapper>
+	<ListWrapper
+		id="experience"
+		hasMore={hasMore}
+		buttonText="View All Experiences"
+	>
 		{
 			experience.map((item) => (
-				<ExperienceCard
+				<ExperienceListItem
 					name={item.data.name}
 					years={item.data.years}
 					position={item.data.position}
@@ -22,7 +27,5 @@ const experience = await getCollection("experience");
 				/>
 			))
 		}
-	</CardsWrapper>
+	</ListWrapper>
 </section>
-
-<style></style>

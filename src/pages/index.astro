@@ -7,6 +7,7 @@ import Home from "../components/sections/Home.astro";
 import Experience from "../components/sections/Experience.astro";
 import Projects from "../components/sections/Projects.astro";
 import Talks from "../components/sections/Talks.astro";
+import ImageLightbox from "../components/ImageLightbox.astro";
 ---
 
 <BaseLayout>
@@ -22,4 +23,19 @@ import Talks from "../components/sections/Talks.astro";
 		<div class="quote">~ Believe in You ~</div>
 		<NavBar />
 	</div>
+
+	<ImageLightbox />
 </BaseLayout>
+
+<script>
+	import { openLightbox } from "../store/uiStore";
+
+	// Wire up all [data-lightbox] images to open the lightbox
+	document
+		.querySelectorAll<HTMLImageElement>("img[data-lightbox]")
+		.forEach((img) => {
+			img.addEventListener("click", () => {
+				openLightbox(img.src, img.alt);
+			});
+		});
+</script>

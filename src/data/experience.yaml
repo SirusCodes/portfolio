@@ -1,8 +1,23 @@
 - name: UBS
   inResume: true
-  years: Aug 2023 – Present
+  years: Feb 2026 – Present
   location: Pune, Maharashtra
-  position: Software Developer Engineer 2
+  position: Software Development Engineer 2
+  image:
+      src: images/ubs-logo.webp
+      alt: UBS
+  description:
+      - Building a LangChain-powered Agentic chatbot for automated employee support and ticket reduction.
+      - Developed a user feedback mechanism with LLM-based filtering, summarization, and report generation.
+  link:
+      href: https://ubs.com
+      text: ubs.com
+
+- name: UBS
+  inResume: true
+  years: Aug 2023 – Feb 2026
+  location: Pune, Maharashtra
+  position: Software Development Engineer
   image:
       src: images/ubs-logo.webp
       alt: UBS
@@ -10,7 +25,6 @@
       - Awarded the Engineering Excellence Award for contributions to our suite of applications
       - Working on micro-frontend architecture using React.js and Angular
       - Runner up for UBS Global hackathon'25 on building a fast and light design library and MCP server
-      - Built a user feedback mechanism with LLM based filtering, summarization and report generation
       - Migrated our frontend applications from on-premises servers to cloud
       - Improved application's Time to Interactivity by 30%, by implementing code splitting and reducing bundle size
   link:
@@ -54,7 +68,7 @@
   location: Remote
   position: Flutter Developer Intern
   image:
-      src: images/posha-logo.webp
+      src: images/posha-logo.png
       alt: Posha
   description:
       - Developed a Flutter app for mobile and the embedded screen on Julia– Posha’s cutting-edge cooking robot
