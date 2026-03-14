@@ -23,6 +23,9 @@ importers:
       astro:
         specifier: ^5.17.1
         version: 5.17.1(@types/node@24.7.1)(rollup@4.52.4)(typescript@5.9.3)
+      astro-masonry:
+        specifier: ^1.2.2
+        version: 1.2.2
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -747,6 +750,9 @@ packages:
 
   array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
+
+  astro-masonry@1.2.2:
+    resolution: {integrity: sha512-416VOoR+6dVjOyM2pxlQFj4AiFIV6NdA6WFUFqkVTitaG61o+5Sz0YTA20FAW7xnbIVWru9h6XIWNeEy3hiPmA==}
 
   astro-robots-txt@1.0.0:
     resolution: {integrity: sha512-6JQSLid4gMhoWjOm85UHLkgrw0+hHIjnJVIUqxjU2D6feKlVyYukMNYjH44ZDZBK1P8hNxd33PgWlHzCASvedA==}
@@ -2447,6 +2453,8 @@ snapshots:
   aria-query@5.3.2: {}
 
   array-iterate@2.0.1: {}
+
+  astro-masonry@1.2.2: {}
 
   astro-robots-txt@1.0.0:
     dependencies:
