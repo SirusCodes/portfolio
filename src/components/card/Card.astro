@@ -1,0 +1,38 @@
+---
+interface Props {
+	class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<div class:list={["card-base", className]}>
+	<slot />
+</div>
+
+<style>
+	.card-base {
+		background-color: var(--card-bg);
+		padding: 1.5em;
+		border: var(--card-border);
+		border-radius: var(--card-radius);
+		backdrop-filter: blur(8px);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease,
+			border-color 0.3s ease;
+	}
+
+	.card-base:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 12px 40px var(--glow-color);
+		border-color: rgba(136, 211, 255, 0.3);
+	}
+
+	@media screen and (max-width: 900px) {
+		.card-base {
+			padding: 1.2em;
+		}
+	}
+</style>

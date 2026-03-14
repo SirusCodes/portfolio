@@ -1,0 +1,45 @@
+---
+interface Props {
+	links: {
+		icon?: string;
+		href: string;
+		text: string;
+	}[];
+}
+
+const { links } = Astro.props;
+---
+
+<div class="card-links">
+	{
+		links.map((link, index) => (
+			<>
+				{link.icon && <i class={link.icon} />}
+				<a href={link.href} target="_blank" rel="noreferrer">
+					{link.text}
+				</a>
+				{index !== links.length - 1 ? " · " : ""}
+			</>
+		))
+	}
+</div>
+
+<style>
+	.card-links {
+		font-size: clamp(15px, 1.6vw, 18px);
+		margin-bottom: 0.75em;
+	}
+
+	.card-links i {
+		text-decoration: none;
+	}
+
+	.card-links a {
+		text-decoration-color: rgba(255, 255, 255, 0.3);
+		transition: color 0.2s ease;
+	}
+
+	.card-links a:hover {
+		color: var(--accent-color);
+	}
+</style>

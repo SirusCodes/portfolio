@@ -1,5 +1,6 @@
 ---
 import CollapsibleDescription from "../wrapper/CollapsibleDescription.astro";
+import Card from "./Card.astro";
 
 type Props = {
 	name: string;
@@ -15,7 +16,7 @@ type Props = {
 const { name, years, image, description, link, position } = Astro.props;
 ---
 
-<div class="list-item">
+<Card class="list-item">
 	<div class="list-item-logo">
 		<img loading="lazy" src={image.src} alt={image.alt} />
 	</div>
@@ -28,8 +29,8 @@ const { name, years, image, description, link, position } = Astro.props;
 			<div class="list-item-years">{years}</div>
 		</div>
 		<CollapsibleDescription
-			id={`exp-${name.replace(/\\s+/g, "-").toLowerCase()}-${position
-				.replace(/\\s+/g, "-")
+			id={`exp-${name.replace(/\s+/g, "-").toLowerCase()}-${position
+				.replace(/\s+/g, "-")
 				.toLowerCase()}`}
 			description={description}
 		/>
@@ -37,26 +38,12 @@ const { name, years, image, description, link, position } = Astro.props;
 			<a href={link.href} target="_blank" rel="noreferrer">{link.text}</a>
 		</div>
 	</div>
-</div>
+</Card>
 
 <style>
 	.list-item {
 		display: flex;
 		gap: 1.5em;
-		padding: 1.5em;
-		background-color: var(--card-bg);
-		border: var(--card-border);
-		border-radius: var(--card-radius);
-		backdrop-filter: blur(8px);
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-		transition: transform 0.3s ease, box-shadow 0.3s ease,
-			border-color 0.3s ease;
-	}
-
-	.list-item:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 12px 40px var(--glow-color);
-		border-color: rgba(136, 211, 255, 0.3);
 	}
 
 	.list-item-logo {
@@ -123,7 +110,6 @@ const { name, years, image, description, link, position } = Astro.props;
 	@media screen and (max-width: 900px) {
 		.list-item {
 			gap: 1em;
-			padding: 1.2em;
 		}
 
 		.list-item-logo {

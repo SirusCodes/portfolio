@@ -1,0 +1,41 @@
+---
+interface Props {
+	src: string;
+	alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<div class="card-image">
+	<img loading="lazy" src={src} alt={alt} data-lightbox />
+</div>
+
+<style>
+	.card-image {
+		width: 100%;
+		margin-bottom: 0.8em;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.card-image img {
+		width: 100%;
+		height: 160px;
+		object-fit: contain;
+		cursor: pointer;
+		transition: transform 0.3s ease;
+		background: rgba(255, 255, 255, 0.03);
+		border-radius: 8px;
+	}
+
+	.card-image img:hover {
+		transform: scale(1.03);
+	}
+
+	@media screen and (max-width: 900px) {
+		.card-image img {
+			max-height: 150px;
+		}
+	}
+</style>

@@ -1,5 +1,9 @@
 ---
 import CollapsibleDescription from "../wrapper/CollapsibleDescription.astro";
+import Card from "./Card.astro";
+import CardName from "./CardName.astro";
+import CardImage from "./CardImage.astro";
+import CardLinks from "./CardLinks.astro";
 
 type Props = {
 	name: string;
@@ -19,85 +23,23 @@ const { name, tags, image, links, description } = Astro.props;
 const itemId = `proj-${name.replace(/\s+/g, "-").toLowerCase()}`;
 ---
 
-<div class="card">
-	<div class="card-name">{name}</div>
+<Card class="project-card">
+	<CardName>{name}</CardName>
 
-	{
-		image && (
-			<div class="card-image">
-				<img
-					loading="lazy"
-					src={image.src}
-					alt={image.alt}
-					data-lightbox
-				/>
-			</div>
-		)
-	}
+	{image && <CardImage src={image.src} alt={image.alt} />}
 
-	<div class="card-links">
-		{
-			links.map((link, index) => (
-				<>
-					<i class={link.icon} />
-					<a href={link.href} target="_blank">
-						{link.text}
-					</a>
-					{index !== links.length - 1 ? " · " : ""}
-				</>
-			))
-		}
-	</div>
+	<CardLinks links={links} />
 
 	<div class="card-tags">
 		{tags.map((tag) => <span class="card-tag">{tag}</span>)}
 	</div>
 
 	<CollapsibleDescription id={itemId} description={description} />
-</div>
+</Card>
 
 <style>
-	.card {
+	.project-card {
 		break-inside: avoid;
-		background-color: var(--card-bg);
-		padding: 1.5em;
-		border: var(--card-border);
-		border-radius: var(--card-radius);
-		backdrop-filter: blur(8px);
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-		transition: transform 0.3s ease, box-shadow 0.3s ease,
-			border-color 0.3s ease;
-	}
-
-	.card:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 12px 40px var(--glow-color);
-		border-color: rgba(136, 211, 255, 0.3);
-	}
-
-	.card-name {
-		font-weight: 600;
-		font-size: clamp(18px, 2vw, 22px);
-		line-height: 1.3;
-		margin-bottom: 0.4em;
-	}
-
-	.card-links {
-		font-size: clamp(15px, 1.6vw, 18px);
-		margin-bottom: 0.75em;
-	}
-
-	.card-links i {
-		text-decoration: none;
-	}
-
-	.card-links a {
-		text-decoration-color: rgba(255, 255, 255, 0.3);
-		transition: color 0.2s ease;
-	}
-
-	.card-links a:hover {
-		color: var(--accent-color);
 	}
 
 	.card-tags {
@@ -113,42 +55,5 @@ const itemId = `proj-${name.replace(/\s+/g, "-").toLowerCase()}`;
 		border-radius: 1em;
 		font-size: clamp(13px, 1.3vw, 15px);
 		line-height: 1.5;
-	}
-
-	.card-image {
-		width: 100%;
-		margin-bottom: 0.8em;
-		border-radius: 8px;
-		overflow: hidden;
-	}
-
-	.card-image img {
-		width: 100%;
-		height: 160px;
-		object-fit: contain;
-		cursor: pointer;
-		transition: transform 0.3s ease;
-		background: rgba(255, 255, 255, 0.03);
-		border-radius: 8px;
-	}
-
-	.card-image img:hover {
-		transform: scale(1.03);
-	}
-
-	@media screen and (max-width: 900px) {
-		.card {
-			padding: 1.1em;
-		}
-
-		.card-header {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 0.3em;
-		}
-
-		.card-image img {
-			max-height: 150px;
-		}
 	}
 </style>
