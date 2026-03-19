@@ -31,6 +31,10 @@ const latexEscape = (text: string) => {
 		.replace(/~/g, "\\textasciitilde{}");
 };
 
+const parseLatexBold = (text: string) => {
+	return text.replace(/\*\*(.*?)\*\*/g, "\\textbf{$1}");
+};
+
 const buildExperience = () => {
 	return experience
 		.map((exp) => {
@@ -40,7 +44,7 @@ const buildExperience = () => {
 			)}}{${latexEscape(data.location)}}{${latexEscape(data.years)}}
 			\\resumeItemListStart
 				${data.description
-					.map((item: string) => `\\resumeItem{${latexEscape(item)}}`)
+					.map((item: string) => `\\resumeItem{${parseLatexBold(latexEscape(item))}}`)
 					.join("\n")}
 			\\resumeItemListEnd`;
 		})
@@ -70,7 +74,7 @@ const buildProjects = () => {
 			)}}{${latexEscape(data.timeline ?? "")}}
           \\resumeItemListStart
 		  	${data.description
-				.map((item: string) => `\\resumeItem{${latexEscape(item)}}`)
+				.map((item: string) => `\\resumeItem{${parseLatexBold(latexEscape(item))}}`)
 				.join("\n")}
           \\resumeItemListEnd`;
 		})

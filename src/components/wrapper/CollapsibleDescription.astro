@@ -1,4 +1,6 @@
 ---
+import { marked } from "marked";
+
 interface Props {
 	id: string;
 	description: string[];
@@ -10,7 +12,11 @@ const { id, description } = Astro.props;
 <div class="collapsible-container">
 	<div class="desc-wrapper" id={id}>
 		<ul class="description-list">
-			{description.map((item) => <li>{item}</li>)}
+			{
+				description.map((item) => (
+					<li set:html={marked.parseInline(item)} />
+				))
+			}
 		</ul>
 	</div>
 	<button
