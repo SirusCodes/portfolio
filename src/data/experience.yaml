@@ -7,6 +7,7 @@
       src: images/ubs-logo.webp
       alt: UBS
   description:
+      - Drove the end-to-end development of an asset and subscription management workflow, delivering over **$2M in realized savings**.
       - Building a **LangChain-powered Agentic chatbot** for automated employee support and ticket reduction.
       - Developed a user feedback mechanism with **LLM-based filtering, summarization, and report generation**.
   link:

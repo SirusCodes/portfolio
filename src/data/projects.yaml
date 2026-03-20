@@ -22,7 +22,7 @@
       - Built **FastAPI service** with persistent conversation threads, automated document ingestion pipeline, and tool-integrated agent architecture for intelligent information retrieval
 
 - name: OwnDB
-  inResume: true
+  inResume: false
   timeline: Jun 2025 - Dec 2025
   tags:
       - Nextjs
