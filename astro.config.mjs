@@ -16,7 +16,9 @@ export default defineConfig({
 
 	integrations: [
 		preact(),
-		sitemap(),
+		sitemap({
+			filter: (page) => !page.includes("build-resume")
+		}),
 		robotsTxt(),
 		generatePDFFromTex(),
 		yeskunallumami({
