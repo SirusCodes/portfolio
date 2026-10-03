@@ -7,6 +7,8 @@
       src: images/ubs-logo.webp
       alt: UBS
   description:
+      - Building an **Agentic AI workflow** for test generation using **Playwright MCP** to reduce manual testing effort by analysing GitLab merge request, issue and existing codebase.
+      - Led a cloud infrastruture optimization initiative, identifying utilization gaps and driving an **Azure App Services to AKS migration** projected to reduce compute cost from **$20K to $6K/month (70% reduction)**; built a **k6-based load-testing framework** to validate capacity and stability..
       - Drove the end-to-end development of an asset and subscription management workflow, delivering over **$2M in realized savings**.
       - Building a **LangChain-powered Agentic chatbot** for automated employee support and ticket reduction.
       - Developed a user feedback mechanism with **LLM-based filtering, summarization, and report generation**.
